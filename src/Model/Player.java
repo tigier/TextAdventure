@@ -3,10 +3,10 @@ package Model;
 /**
  * Created by Kot on 12.09.2016.
  */
-public class Kotnascher {
+public class Player {
     int strength = 5;
-    int xPos;
-    int yPos;
+    public int xPos;
+    public int yPos;
     boolean weaponEquipped = false;
 
     public void Kotnascher(int xPos, int yPos){
@@ -44,16 +44,16 @@ public class Kotnascher {
 
     //Movement
     public void moveToNorth(){
-        yPos--;
+        this.yPos++;
     }
     public void moveToSouth(){
-        yPos++;
+        this.yPos--;
     }
-    public void moveToEast(){
-        xPos++;
+    public void moveToEast() {
+        this.xPos++;
     }
-    public void moveToWest(){
-        xPos--;
+    public void moveToWest() {
+        this.xPos--;
     }
 
 }
