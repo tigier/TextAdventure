@@ -9,7 +9,7 @@ public class Player {
     public int yPos;
     boolean weaponEquipped = false;
 
-    public void Kotnascher(int xPos, int yPos){
+    public void Player(int xPos, int yPos){
         this.xPos = xPos;
         this.yPos = yPos;
     }
