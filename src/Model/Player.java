@@ -1,8 +1,5 @@
 package Model;
 
-/**
- * Created by Kot on 12.09.2016.
- */
 public class Player {
     int strength = 5;
     public int xPos;

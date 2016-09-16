@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Model.TextAdventure">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="View1.TextAdventure">
   <grid id="27dc6" binding="actionPanel" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-16777216"/>
+      <foreground color="-16777216"/>
+    </properties>
     <border type="none"/>
     <children>
-      <component id="748b7" class="javax.swing.JTextField" binding="actionField">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="9" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="240" height="24"/>
-          </grid>
-        </constraints>
-        <properties>
-          <editable value="true"/>
-        </properties>
-      </component>
       <component id="b1a7b" class="javax.swing.JButton" binding="SButton">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-16777216"/>
+          <foreground color="-1"/>
           <text value="South"/>
         </properties>
       </component>
@@ -31,6 +26,8 @@
           <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-16777216"/>
+          <foreground color="-1"/>
           <text value="North"/>
         </properties>
       </component>
@@ -39,7 +36,20 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-16777216"/>
+          <foreground color="-1"/>
           <text value="West"/>
+        </properties>
+      </component>
+      <component id="ca96" class="javax.swing.JTextArea" binding="textArea">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <foreground color="-1"/>
         </properties>
       </component>
       <component id="b3709" class="javax.swing.JButton" binding="EButton">
@@ -47,6 +57,8 @@
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-16777216"/>
+          <foreground color="-1"/>
           <text value="East"/>
         </properties>
       </component>
