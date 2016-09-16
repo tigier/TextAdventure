@@ -7,8 +7,8 @@ public class ModelTestClass {
 
     public static void main(String[] args) {
         Map map = new Map();
-        //map.extendArrayRigth();
-        map.extendArrayDown();
+        //map.extendArray(0);
+        map.extendArray(1);
 
     }
 }
