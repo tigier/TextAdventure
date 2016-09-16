@@ -1,13 +1,11 @@
 package View1;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Control.Movement;
-/**
- * Created by Anthony on 12.09.2016.
- */
+
 public class TextAdventure extends JFrame{
+
     private JPanel actionPanel;
     private JButton SButton;
     private JButton NButton;
@@ -16,9 +14,7 @@ public class TextAdventure extends JFrame{
     public JTextArea textArea;
     Movement move = new Movement();
 
-
     public TextAdventure() {
-
         super("Text Adventure");
         this.setContentPane(actionPanel);
         this.pack();
@@ -50,5 +46,4 @@ public class TextAdventure extends JFrame{
             }
         });
     }
-
 }

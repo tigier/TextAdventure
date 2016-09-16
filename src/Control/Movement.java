@@ -1,13 +1,8 @@
 package Control;
 import Model.Player;
 
-/**
- * Created by Anthony on 12.09.2016.
- */
 public class Movement {
-
-        Player player = new Player();
-
+    Player player = new Player();
 
     public void movePlayer(String direction){
         if (direction.equals("North")){
