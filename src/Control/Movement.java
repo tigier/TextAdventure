@@ -1,5 +1,5 @@
 package Control;
-
+import View1.TextAdventure;
 import Model.Player;
 
 /**
@@ -8,6 +8,10 @@ import Model.Player;
 public class Movement {
 
     Player player = new Player();
+
+    public static void main(String[] args){
+        TextAdventure view = new TextAdventure();
+    }
 
     public void movePlayer(String direction){
         if (direction.equals("North")){
