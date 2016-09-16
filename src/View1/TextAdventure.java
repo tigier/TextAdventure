@@ -13,7 +13,7 @@ public class TextAdventure extends JFrame{
     private JButton NButton;
     private JButton WButton;
     private JButton EButton;
-    private JTextArea textArea1;
+    public JTextArea textArea;
     Movement move = new Movement();
 
 
@@ -28,21 +28,25 @@ public class TextAdventure extends JFrame{
         NButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 move.movePlayer("North");
+                textArea.setText("");
             }
         });
         SButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 move.movePlayer("South");
+                textArea.setText("");
             }
         });
         WButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 move.movePlayer("West");
+                textArea.setText("");
             }
         });
         EButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 move.movePlayer("East");
+                textArea.setText("");
             }
         });
     }
