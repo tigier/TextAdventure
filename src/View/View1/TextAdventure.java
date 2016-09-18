@@ -54,12 +54,12 @@ public class TextAdventure extends JFrame{
     public void setConsole(){
         textArea.setText("Current tile: [" + thor.player.getYPos() + "/" + thor.player.getXPos() + "]" + "\n");
         if(newGame == true) {
-            textArea.setText(textArea.getText() + getStartMessage());
+            textArea.setText(textArea.getText() + StartMessage());
             newGame=false;
         }
     }
 
-    public String getStartMessage(){
+    public String StartMessage(){
         return "Hello Player,"+"\n"+"This is our Textadventure."+"\n"+"To play the game simply move around the tile-based world,"+"\n"+"find weapons and battle monsters."+"\n"+"\n"+"Have fun!";
     }
 
