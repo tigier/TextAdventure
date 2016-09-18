@@ -39,7 +39,7 @@ public class Player {
         return weaponEquipped;
     }
 
-    //Movement
+    //God
     public void moveToNorth(){
         this.yPos++;
     }

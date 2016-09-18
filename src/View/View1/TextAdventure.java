@@ -2,7 +2,7 @@ package View.View1;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import Control.Movement;
+import Control.God;
 
 public class TextAdventure extends JFrame{
 
@@ -12,7 +12,10 @@ public class TextAdventure extends JFrame{
     private JButton WButton;
     private JButton EButton;
     public JTextArea textArea;
-    Movement move = new Movement();
+    private boolean newGame = true;
+    God thor = new God();
+
+
 
     public TextAdventure() {
         super("Text Adventure");
@@ -20,30 +23,44 @@ public class TextAdventure extends JFrame{
         this.pack();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
+        setConsole();
 
         NButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                move.movePlayer("North");
-                textArea.setText("");
+                thor.movePlayer("North");
+                setConsole();
             }
         });
         SButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                move.movePlayer("South");
-                textArea.setText("");
+                thor.movePlayer("South");
+                setConsole();
             }
         });
         WButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                move.movePlayer("West");
-                textArea.setText("");
+                thor.movePlayer("West");
+                setConsole();
             }
         });
         EButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                move.movePlayer("East");
-                textArea.setText("");
+                thor.movePlayer("East");
+                setConsole();
             }
         });
     }
+
+    public void setConsole(){
+        textArea.setText("Current tile: [" + thor.player.getYPos() + "/" + thor.player.getXPos() + "]" + "\n");
+        if(newGame == true) {
+            textArea.setText(textArea.getText() + getStartMessage());
+            newGame=false;
+        }
+    }
+
+    public String getStartMessage(){
+        return "Hello Player,"+"\n"+"This is our Textadventure."+"\n"+"To play the game simply move around the tile-based world,"+"\n"+"find weapons and battle monsters."+"\n"+"\n"+"Have fun!";
+    }
+
 }

@@ -1,8 +1,11 @@
 package Control;
 import Model.Player;
+import View.View1.TextAdventure;
 
-public class Movement {
-    Player player = new Player();
+
+public class God {
+    public Player player = new Player();
+
 
     public void movePlayer(String direction){
         if (direction.equals("North")){
@@ -20,4 +23,7 @@ public class Movement {
             player.moveToWest();
         }
     }
+
+
+
 }

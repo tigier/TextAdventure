@@ -6,7 +6,6 @@ public class Map {
 
     public void extendArray(int w){
         if(w == 0){
-            //erstes generiertes feld
         }
         else if(w == 1) {
             int[][] dummy = new int[mapArray.length + 1][mapArray[0].length];
@@ -22,7 +21,6 @@ public class Map {
             mapArray = dummy;
             System.out.print(mapArray[1].length);
         }
-        //else if(w == 3){
-        // Mach es mal nach diesem Prinzip zuende (und gebe der map noch eine Variable mit der wir angeben können was auf dem feld liegt.)
     }
+    // der obere teil ist nutzlos für unser vorhaben......was wir bräuchten ist eine normale map klasse mit methoden und ein array im controller das verschiedene maps speichert und verwaltet
 }

@@ -17,6 +17,7 @@
         </constraints>
         <properties>
           <background color="-16777216"/>
+          <borderPainted value="false"/>
           <foreground color="-1"/>
           <text value="South"/>
         </properties>
@@ -27,7 +28,10 @@
         </constraints>
         <properties>
           <background color="-16777216"/>
+          <borderPainted value="false"/>
+          <focusable value="true"/>
           <foreground color="-1"/>
+          <selected value="false"/>
           <text value="North"/>
         </properties>
       </component>
@@ -37,6 +41,7 @@
         </constraints>
         <properties>
           <background color="-16777216"/>
+          <borderPainted value="false"/>
           <foreground color="-1"/>
           <text value="West"/>
         </properties>
@@ -58,6 +63,7 @@
         </constraints>
         <properties>
           <background color="-16777216"/>
+          <borderPainted value="false"/>
           <foreground color="-1"/>
           <text value="East"/>
         </properties>
