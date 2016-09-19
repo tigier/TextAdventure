@@ -22,5 +22,4 @@ public class Map {
             System.out.print(mapArray[1].length);
         }
     }
-    // der obere teil ist nutzlos für unser vorhaben......was wir bräuchten ist eine normale map klasse mit methoden und ein array im controller das verschiedene maps speichert und verwaltet
 }
