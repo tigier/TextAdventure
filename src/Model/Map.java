@@ -21,5 +21,6 @@ public class Map {
             mapArray = dummy;
             System.out.print(mapArray[1].length);
         }
+        //lalalalala git mach hin
     }
 }
