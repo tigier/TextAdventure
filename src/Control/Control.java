@@ -3,7 +3,7 @@ import Model.Player;
 import View.View1.TextAdventure;
 
 
-public class God {
+public class Control {
     public Player player = new Player();
 
 

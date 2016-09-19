@@ -2,7 +2,8 @@ package View.View1;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import Control.God;
+
+import Control.Control;
 
 public class TextAdventure extends JFrame{
 
@@ -13,7 +14,7 @@ public class TextAdventure extends JFrame{
     private JButton EButton;
     public JTextArea textArea;
     private boolean newGame = true;
-    God thor = new God();
+    Control control = new Control();
 
 
 
@@ -27,32 +28,32 @@ public class TextAdventure extends JFrame{
 
         NButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                thor.movePlayer("North");
+                control.movePlayer("North");
                 setConsole();
             }
         });
         SButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                thor.movePlayer("South");
+                control.movePlayer("South");
                 setConsole();
             }
         });
         WButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                thor.movePlayer("West");
+                control.movePlayer("West");
                 setConsole();
             }
         });
         EButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                thor.movePlayer("East");
+                control.movePlayer("East");
                 setConsole();
             }
         });
     }
 
     public void setConsole(){
-        textArea.setText("Current tile: [" + thor.player.getYPos() + "/" + thor.player.getXPos() + "]" + "\n");
+        textArea.setText("Current tile: [" + control.player.getYPos() + "/" + control.player.getXPos() + "]" + "\n");
         if(newGame == true) {
             textArea.setText(textArea.getText() + StartMessage());
             newGame=false;

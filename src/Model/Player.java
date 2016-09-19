@@ -5,13 +5,14 @@ public class Player {
     public int xPos;
     public int yPos;
     boolean weaponEquipped = false;
+    int tilesCleared = 0;
 
     public void Player(int xPos, int yPos){
         this.xPos = xPos;
         this.yPos = yPos;
     }
 
-    //set-Methoden
+    //set-Methods
     public void setXPos(int xPos){
         this.xPos = xPos;
     }
@@ -21,11 +22,14 @@ public class Player {
     public void setStrength(int strength){
         this.strength = strength;
     }
+    public void setTilesCleared(int tilesCleared){
+        this.tilesCleared = tilesCleared;
+    }
     public void setWeaponEquipped(boolean weapon){
         this.weaponEquipped = weapon;
     }
 
-    //get-Methoden
+    //get-Methods
     public int getXPos(){
         return xPos;
     }
@@ -35,11 +39,15 @@ public class Player {
     public int getStrength(){
         return strength;
     }
+    public int getTilesCleared(){
+        return tilesCleared;
+    }
+
     public boolean isWeaponEquipped(){
         return weaponEquipped;
     }
 
-    //God
+    //Control
     public void moveToNorth(){
         this.yPos++;
     }
