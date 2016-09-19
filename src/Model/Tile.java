@@ -5,7 +5,12 @@ package Model;
  */
 public class Tile {
     int x,y,content;
-    Monster monster;
+
+    public Tile(int x, int y, int content) {
+        this.x = x;
+        this.y = y;
+        this.content = content;
+    }
 
     public int getContent() {
         return content;
@@ -30,8 +35,5 @@ public class Tile {
 
     public void setX(int x) {
         this.x = x;
-    }
-    public void newMonster(Monster monster){
-        this.monster = monster;
     }
 }

@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import Control.FightHandler;
 import Control.Control;
 
 public class TextAdventure extends JFrame{
@@ -15,6 +16,7 @@ public class TextAdventure extends JFrame{
     public JTextArea textArea;
     private boolean newGame = true;
     Control control = new Control();
+
 
 
 
@@ -53,7 +55,7 @@ public class TextAdventure extends JFrame{
     }
 
     public void setConsole(){
-        textArea.setText("Current tile: [" + control.player.getYPos() + "/" + control.player.getXPos() + "]" + "\n");
+        textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n");
         if(newGame == true) {
             textArea.setText(textArea.getText() + StartMessage());
             newGame=false;

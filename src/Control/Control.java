@@ -1,26 +1,26 @@
 package Control;
-import Model.Player;
-import View.View1.TextAdventure;
+import Model.Map;
 
 
 public class Control {
-    public Player player = new Player();
+    FightHandler fH = new FightHandler();
+    public Map map = new Map();
 
 
     public void movePlayer(String direction){
         if (direction.equals("North")){
-            player.moveToNorth();
+            map.getPlayer().moveToNorth();
         }
         else if (direction.equals("South"))
         {
-            player.moveToSouth();
+            map.getPlayer().moveToSouth();
         }
         else if (direction.equals("East"))
         {
-            player.moveToEast();
+            map.getPlayer().moveToEast();
         }
         else if (direction.equals("West")){
-            player.moveToWest();
+            map.getPlayer().moveToWest();
         }
     }
 
