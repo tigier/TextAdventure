@@ -2,10 +2,11 @@ package Model;
 import Model.Tile;
 
 public class Map {
-    Player player = new Player();
+    private Player player;
     Tile[][] mapArray = new Tile[1][1];
 
-    public Map() {
+    public Map(Player player) {
+        this.player = player;
         mapArray[0][0]=new Tile(0,0,0);
     }
 

@@ -54,6 +54,7 @@ public class TextAdventure extends JFrame{
         });
     }
 
+
     public void setConsole(){
         textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n");
         if(newGame == true) {

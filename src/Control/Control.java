@@ -1,10 +1,17 @@
 package Control;
 import Model.Map;
+import Model.Player;
 
 
 public class Control {
-    FightHandler fH = new FightHandler();
-    public Map map = new Map();
+    FightHandler fH;
+    public Map map;
+
+    public Control(){
+        Player player = new Player();
+        map = new Map(player);
+        fH = new FightHandler(player);
+    }
 
 
     public void movePlayer(String direction){
