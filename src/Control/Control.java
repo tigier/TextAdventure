@@ -17,6 +17,7 @@ public class Control {
     public void movePlayer(String direction){
         if (direction.equals("North")){
             map.getPlayer().moveToNorth();
+            if(map.mapArray){
         }
         else if (direction.equals("South"))
         {

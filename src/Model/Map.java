@@ -30,6 +30,10 @@ public class Map {
         }
     }
 
+    public int getTilePosition(){
+        return ;
+    }
+
     public Player getPlayer() {
         return player;
     }
