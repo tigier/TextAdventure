@@ -1,6 +1,5 @@
 package Control;
 import Model.Player;
-import Model.Peperoni;
 import Model.Tile;
 public class FightHandler {
 
