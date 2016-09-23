@@ -1,10 +1,12 @@
 package Model;
+import Control.God;
+import Model.Weapons.*;
 
 public class Player {
     int strength = 5;
     public int xPos;
     public int yPos;
-    boolean weaponEquipped = false;
+    Weapon weaponEquipped;
     int tilesCleared = 0;
 
     public void Player(int xPos, int yPos){
@@ -25,8 +27,8 @@ public class Player {
     public void setTilesCleared(int tilesCleared){
         this.tilesCleared = tilesCleared;
     }
-    public void setWeaponEquipped(boolean weapon){
-        this.weaponEquipped = weapon;
+    public void setWeaponEquipped(){
+        this.weaponEquipped = God.createWeapon(1);
     }
 
     //get-Methods
@@ -41,10 +43,6 @@ public class Player {
     }
     public int getTilesCleared(){
         return tilesCleared;
-    }
-
-    public boolean isWeaponEquipped(){
-        return weaponEquipped;
     }
 
     //Control

@@ -1,4 +1,4 @@
-package Model;
+package Model.Monster;
 
 /**
  * Created by 204g04 on 19.09.2016.
