@@ -16,9 +16,6 @@ public class TextAdventure extends JFrame{
     Control control = new Control();
     boolean fight = false;
 
-
-
-
     public TextAdventure() {
         super("Text Adventure");
         this.setContentPane(actionPanel);
