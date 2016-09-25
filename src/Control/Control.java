@@ -10,24 +10,23 @@ public class Control {
 
     public Control(){
         map = new Map(player);
-        fH = new FightHandler(player);
+        fH = new FightHandler(player,map);
     }
 
 
     public void movePlayer(String direction){
         if (direction.equals("North")) {
             map.getPlayer().moveToNorth();
-            if (map.getMapArray()) {
-            } else if (direction.equals("South")) {
-                map.getPlayer().moveToSouth();
-            } else if (direction.equals("East")) {
-                map.getPlayer().moveToEast();
-            } else if (direction.equals("West")) {
-                map.getPlayer().moveToWest();
-            }
+        } else if (direction.equals("South")) {
+            map.getPlayer().moveToSouth();
+        } else if (direction.equals("East")) {
+            map.getPlayer().moveToEast();
+        } else if (direction.equals("West")) {
+            map.getPlayer().moveToWest();
         }
+    }
 
-        public Player getPlayer(){
+    public Player getPlayer(){
             return player;
     }
 }
