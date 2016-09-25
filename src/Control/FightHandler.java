@@ -29,7 +29,7 @@ public class FightHandler {
     }
 
     public void fight(){
-        tile = map.getPosition();
+        tile = map.getTile();
         monster = tile.getMonster();
         weapon = player.getWeaponEquipped();
         if ((player.getStrength()+weapon.getStrength()) >= monster.getStrength()){

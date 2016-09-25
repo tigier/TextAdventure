@@ -1,5 +1,4 @@
 package Model;
-import Model.Tile;
 
 public class Map {
     private Player player;
@@ -14,7 +13,7 @@ public class Map {
     //TODO contents
     public void extendArray(int w){
         if(w == 0) {
-            oldTile = getPosition();
+            oldTile = getTile();
             Tile[][] dummy = new Tile[mapArray.length + 1][mapArray[0].length];
             System.arraycopy(mapArray, 0, dummy, 0, mapArray.length);
             System.arraycopy(mapArray[0], 0, dummy[0], 0, mapArray[0].length);
@@ -23,7 +22,7 @@ public class Map {
             System.out.print(mapArray.length);
         }
         else if (w == 1){
-            oldTile = getPosition();
+            oldTile = getTile();
             Tile[][] dummy = new Tile[mapArray.length][mapArray[1].length + 1];
             System.arraycopy(mapArray,0,dummy,0,mapArray.length);
             System.arraycopy(mapArray[1],0,dummy[1],0,mapArray[1].length);
@@ -33,10 +32,9 @@ public class Map {
         }
     }
 
-    public Tile getPosition(){
+    public Tile getTile(){
         return mapArray[player.getYPos()][player.getXPos()];
     }
-
     public Player getPlayer() {
         return player;
     }

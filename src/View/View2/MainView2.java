@@ -69,10 +69,10 @@ public class MainView2 extends JFrame{
         if (control.getPlayer().getTilesCleared() == 0) {
             textArea3.setText(textArea3.getText() + StartMessage());
             control.getPlayer().clearTile();
-        } else if (control.map.getPosition().getMonster() != null) {
+        } else if (control.map.getTile().getMonster() != null) {
             textArea2.setText(textArea2.getText() + actionMessageM());
         }
-        else if(control.map.getPosition().getWeapon() != null){
+        else if(control.map.getTile().getWeapon() != null){
             textArea2.setText(textArea2.getText()+actionMessageW());
         }
         else{
@@ -85,7 +85,7 @@ public class MainView2 extends JFrame{
     }
 
     public String actionMessage(){
-        if (control.map.getPosition().getCleared() == false){
+        if (control.map.getTile().getCleared() == false){
             return "Keep going!"+"\n"+"Here is nothing to see.";
         }
         else{
@@ -94,28 +94,28 @@ public class MainView2 extends JFrame{
     }
 
     public String actionMessageM(){
-        if (control.map.getPosition().getMonster().getName() == "Slime"){
+        if (control.map.getTile().getMonster().getName() == "Slime"){
             return "You have encountered:"+"\n"+"A smelling pile of goo!";
         }
-        else if (control.map.getPosition().getMonster().getName() == "Goblin"){
+        else if (control.map.getTile().getMonster().getName() == "Goblin"){
             return "You have encountered:"+"\n"+"An ugly lilliputian!";
         }
-        else if (control.map.getPosition().getMonster().getName() == "SlimeKing"){
+        else if (control.map.getTile().getMonster().getName() == "SlimeKing"){
             return "You have encountered:"+"\n"+"A royal pile of goo!";
         }
-        else if (control.map.getPosition().getMonster().getName() == "Ogre"){
+        else if (control.map.getTile().getMonster().getName() == "Ogre"){
             return "You have encountered:"+"\n"+"A green swamp guy!";
         }
-        else if (control.map.getPosition().getMonster().getName() == "Orc"){
+        else if (control.map.getTile().getMonster().getName() == "Orc"){
             return "You have encountered:"+"\n"+"An ugly face ,who really needs an orthodontist!";
         }
-        else if (control.map.getPosition().getMonster().getName() == "Golem"){
+        else if (control.map.getTile().getMonster().getName() == "Golem"){
             return "You have encountered:"+"\n"+"A living mountain!!!";
         }
-        else if (control.map.getPosition().getMonster().getName() == "Demon"){
+        else if (control.map.getTile().getMonster().getName() == "Demon"){
             return "You have encountered:"+"\n"+"A GODDAMN SERVANT OF HELL!!!!!!!!!!!!!!.....REALLY ANTHONY!?!?!?!"+"\n"+"YOU THOUGHT THAT WAS A GOOD IDEA?";
         }
-        else if (control.map.getPosition().getMonster().getName() == "Dragon"){
+        else if (control.map.getTile().getMonster().getName() == "Dragon"){
             return "You have encountered:"+"\n"+"A GODDAMN DRAGON!!!!!...You programmers are Crazy!!!";
         }
         else{
