@@ -9,9 +9,7 @@ import Model.Player;
 public class God {
 
     public static Weapon createWeapon(Player player) {
-        if (player.getWeaponEquipped().equals(null)) {
-            return new Knife();
-        } else if (player.getWeaponEquipped().getName().equals("Knife")) {
+        if (player.getWeaponEquipped().getName().equals("Knife")) {
             return new Dagger();
         } else if (player.getWeaponEquipped().getName().equals("Dagger")) {
             return new Shortsword();

@@ -3,6 +3,6 @@ import View.View2.MainView2;
 
 public class MainProgram {
     public static void main(String[] args) {
-       MainView2 view = new MainView2();
+       TextAdventure view = new TextAdventure();
     }
 }

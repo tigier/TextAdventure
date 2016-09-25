@@ -6,7 +6,7 @@ public class Player {
     int strength = 5;
     public int xPos;
     public int yPos;
-    Weapon weaponEquipped = God.createWeapon(this);
+    Weapon weaponEquipped = new Knife();
     int tilesCleared = 0;
 
     public void Player(int xPos, int yPos){

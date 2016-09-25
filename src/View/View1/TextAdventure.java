@@ -50,7 +50,6 @@ public class TextAdventure extends JFrame{
         });
     }
 
-
     public void setConsole() {
         textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n" + "\n");
         if (control.getPlayer().getTilesCleared() == 0) {
@@ -108,6 +107,7 @@ public class TextAdventure extends JFrame{
             return null;
         }
     }
+
     public String actionMessageW(){
         return null;
     }
