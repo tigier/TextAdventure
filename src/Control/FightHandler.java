@@ -1,6 +1,7 @@
 package Control;
 import Model.Player;
 import Model.Tile;
+
 public class FightHandler {
 
     int strength;

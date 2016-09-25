@@ -58,5 +58,8 @@ public class Player {
     public void moveToWest() {
         this.xPos--;
     }
+    public void clearTile(){
+        tilesCleared++;
+    }
 
 }

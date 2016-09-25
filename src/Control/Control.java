@@ -6,9 +6,9 @@ import Model.Player;
 public class Control {
     FightHandler fH;
     public Map map;
+    Player player = new Player();
 
     public Control(){
-        Player player = new Player();
         map = new Map(player);
         fH = new FightHandler(player);
     }
@@ -32,6 +32,9 @@ public class Control {
         }
     }
 
+        public Player getPlayer(){
+            return player;
+    }
 
 
 }

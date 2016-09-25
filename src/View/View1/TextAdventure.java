@@ -14,7 +14,6 @@ public class TextAdventure extends JFrame{
     private JButton WButton;
     private JButton EButton;
     public JTextArea textArea;
-    private boolean newGame = true;
     Control control = new Control();
 
 
@@ -57,9 +56,12 @@ public class TextAdventure extends JFrame{
 
     public void setConsole(){
         textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n");
-        if(newGame == true) {
+        if(control.getPlayer().getTilesCleared() == 0) {
             textArea.setText(textArea.getText() + StartMessage());
-            newGame=false;
+            control.getPlayer().clearTile();
+        }
+        else{
+            textArea.setText(textArea.getText()+);
         }
     }
 

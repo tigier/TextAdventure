@@ -30,8 +30,8 @@ public class Map {
         }
     }
 
-    public int getTilePosition(){
-        return ;
+    public Tile getPosition(){
+        return mapArray[player.getYPos()][player.getXPos()];
     }
 
     public Player getPlayer() {
