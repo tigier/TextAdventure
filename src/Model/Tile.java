@@ -1,23 +1,30 @@
 package Model;
-
+import Model.Weapons.Weapon;
+import Model.Monster.Monster;
 /**
  * Created by 204g05 on 19.09.2016.
  */
 public class Tile {
-    int x,y,content;
+    int x,y;
+    Weapon weapon;
+    Monster monster;
 
-    public Tile(int x, int y, int content) {
+    public Tile(int x, int y, Weapon weapon, Monster monster) {
         this.x = x;
         this.y = y;
-        this.content = content;
+        this.weapon = weapon;
+        this.monster = monster;
     }
 
-    public int getContent() {
-        return content;
+    public Monster getMonster() {
+        return monster;
     }
-
-    public void setContent(int content) {
-        this.content = content;
+    public Weapon getWeapon() {
+        return getWeapon();
+    }
+    public void clear() {
+        monster = null;
+        weapon = null;
     }
 
     public int getY() {
