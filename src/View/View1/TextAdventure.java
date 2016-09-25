@@ -6,7 +6,13 @@ import java.awt.event.ActionListener;
 import Control.FightHandler;
 import Control.Control;
 import Model.Monster.*;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import Control.FightHandler;
+import Control.Control;
+import Model.Monster.*;
 public class TextAdventure extends JFrame{
 
     private JPanel actionPanel;
