@@ -19,6 +19,7 @@ public class MainView2 extends JFrame{
     private JButton escapeButton;
     private JButton dodgeButton;
     Control control = new Control();
+    boolean fight = false;
 
     public MainView2() {
         super("Text Adventure");
@@ -116,5 +117,9 @@ public class MainView2 extends JFrame{
 
     public String actionMessageW(){
         return null;
+    }
+
+    public void fight(){
+        fight = true;
     }
 }
