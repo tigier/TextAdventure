@@ -2,6 +2,7 @@ package Control;
 import Model.Map;
 import Model.Player;
 
+
 public class Control {
     FightHandler fH;
     public Map map;
@@ -9,22 +10,31 @@ public class Control {
 
     public Control(){
         map = new Map(player);
-        fH = new FightHandler(player, map);
+        fH = new FightHandler(player);
     }
+
 
     public void movePlayer(String direction){
         if (direction.equals("North")){
             map.getPlayer().moveToNorth();
-        } else if (direction.equals("South")){
+            if(map.mapArray){
+        }
+        else if (direction.equals("South"))
+        {
             map.getPlayer().moveToSouth();
-        } else if (direction.equals("East")){
+        }
+        else if (direction.equals("East"))
+        {
             map.getPlayer().moveToEast();
-        } else if (direction.equals("West")){
+        }
+        else if (direction.equals("West")){
             map.getPlayer().moveToWest();
         }
     }
 
-    public Player getPlayer(){
+        public Player getPlayer(){
             return player;
     }
+
+
 }

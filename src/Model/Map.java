@@ -18,7 +18,6 @@ public class Map {
             System.arraycopy(mapArray[0], 0, dummy[0], 0, mapArray[0].length);
             mapArray = dummy;
             mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),0);
-            System.out.print(mapArray.length);
         }
         else if (w == 1){
             Tile[][] dummy = new Tile[mapArray.length][mapArray[1].length + 1];
@@ -26,7 +25,6 @@ public class Map {
             System.arraycopy(mapArray[1],0,dummy[1],0,mapArray[1].length);
             mapArray = dummy;
             mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),0);
-            System.out.print(mapArray[1].length);
         }
     }
 
@@ -37,4 +35,9 @@ public class Map {
     public Player getPlayer() {
         return player;
     }
+
+    public Tile[][] getMapArray() {
+        return mapArray;
+    }
 }
+

@@ -8,6 +8,7 @@ public class Tile {
     int x,y;
     Weapon weapon;
     Monster monster;
+    boolean cleared = false;
 
     public Tile(int x, int y, Weapon weapon, Monster monster) {
         this.x = x;
@@ -19,14 +20,18 @@ public class Tile {
     public Monster getMonster() {
         return monster;
     }
-    public Weapon getWeapon() {
+    public Weapon getWeapon(){
         return weapon;
     }
     public void clear() {
         monster = null;
         weapon = null;
+        cleared = true;
     }
 
+    public boolean getCleared(){
+        return cleared;
+    }
     public int getY() {
         return y;
     }

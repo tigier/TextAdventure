@@ -55,13 +55,13 @@ public class TextAdventure extends JFrame{
 
 
     public void setConsole(){
-        textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n");
+        textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n"+"\n");
         if(control.getPlayer().getTilesCleared() == 0) {
             textArea.setText(textArea.getText() + StartMessage());
             control.getPlayer().clearTile();
         }
         else{
-            textArea.setText(textArea.getText()+);
+            textArea.setText(textArea.getText()+actionMessage());
         }
     }
 
@@ -69,4 +69,15 @@ public class TextAdventure extends JFrame{
         return "Hello Player,"+"\n"+"This is our Textadventure."+"\n"+"To play the game simply move around the tile-based world,"+"\n"+"find weapons and battle monsters."+"\n"+"\n"+"Have fun!";
     }
 
+    public String actionMessage(){
+        if (control.map.getPosition().getMonster() == null && control.map.getPosition().getWeapon() == null && control.map.getPosition().getCleared() == false){
+            return "Keep going!"+"\n"+"Here is nothing to see.";
+        }
+        else if (control.map.getPosition().getMonster() == null && control.map.getPosition().getWeapon() == null && control.map.getPosition().getCleared() == true){
+            return "This place seems familiar."+"\n"+"Nothing here tho.";
+        }
+        else if (control.map.getPosition().getMonster() ==){
+
+        }
+    }
 }
