@@ -16,7 +16,7 @@ public class Tile {
         this.y = y;
         this.weapon = weapon;
         this.monster = monster;
-        if (weapon == null && monster == null){
+        if (weapon ==(null) && monster == (null)){
             cleared = true;
         }
     }
