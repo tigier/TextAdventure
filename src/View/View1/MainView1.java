@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 import Control.Control;
 
-public class TextAdventure extends JFrame{
+public class MainView1 extends JFrame{
 
     private JPanel actionPanel;
     private JButton SButton;
@@ -16,7 +16,7 @@ public class TextAdventure extends JFrame{
     Control control = new Control();
     boolean fight = false;
 
-    public TextAdventure() {
+    public MainView1() {
         super("Text Adventure");
         this.setContentPane(actionPanel);
         this.pack();
