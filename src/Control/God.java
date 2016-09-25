@@ -9,29 +9,29 @@ import Model.Player;
 public class God {
 
     public static Weapon createWeapon(Player player) {
-        if (player.getWeaponEquipped() == null) {
+        if (player.getWeaponEquipped().equals(null)) {
             return new Knife();
-        } else if (player.getWeaponEquipped() == Knife) {
+        } else if (player.getWeaponEquipped().equals(Knife)) {
             return new Dagger();
-        } else if (player.getWeaponEquipped() == Dagger) {
+        } else if (player.getWeaponEquipped().equals(Dagger)) {
             return new Shortsword();
-        } else if (player.getWeaponEquipped() == Shortsword) {
+        } else if (player.getWeaponEquipped().equals(Shortsword)) {
             return new Axe();
-        } else if (player.getWeaponEquipped() == Axe) {
+        } else if (player.getWeaponEquipped().equals(Axe)) {
             return new Scythe();
-        } else if (player.getWeaponEquipped() == Scythe) {
+        } else if (player.getWeaponEquipped().equals(Scythe)) {
             return new Spear();
-        } else if (player.getWeaponEquipped() == Spear) {
+        } else if (player.getWeaponEquipped().equals(Spear)) {
             return new Sword();
-        } else if (player.getWeaponEquipped() == Sword) {
+        } else if (player.getWeaponEquipped().equals(Sword)) {
             return new Halberd();
-        } else if (player.getWeaponEquipped() == Halberd) {
+        } else if (player.getWeaponEquipped().equals(Halberd)) {
             return new Flail();
-        } else if (player.getWeaponEquipped() == Flail) {
+        } else if (player.getWeaponEquipped().equals(Flail)) {
             return new Longsword();
-        } else if (player.getWeaponEquipped() == Longsword) {
+        } else if (player.getWeaponEquipped().equals(Longsword)) {
             return new Broadsword();
-        } else if (player.getWeaponEquipped() == Broadsword){
+        } else if (player.getWeaponEquipped().equals(Broadsword)) {
             return new Lightsaber();
         }
         return null;
