@@ -9,29 +9,29 @@ import Model.Player;
 public class God {
 
     public static Weapon createWeapon(Player player) {
-        if (player.getWeaponEquipped().equals(null)) {
+        if (player.getWeaponEquipped() == null) {
             return new Knife();
-        } else if (player.getWeaponEquipped().equals(Knife)) {
+        } else if (player.getWeaponEquipped() == Knife) {
             return new Dagger();
-        } else if (player.getWeaponEquipped().equals(Dagger)) {
+        } else if (player.getWeaponEquipped() == Dagger) {
             return new Shortsword();
-        } else if (player.getWeaponEquipped().equals(Shortsword)) {
+        } else if (player.getWeaponEquipped() == Shortsword) {
             return new Axe();
-        } else if (player.getWeaponEquipped().equals(Axe)) {
+        } else if (player.getWeaponEquipped() == Axe) {
             return new Scythe();
-        } else if (player.getWeaponEquipped().equals(Scythe)) {
+        } else if (player.getWeaponEquipped() == Scythe) {
             return new Spear();
-        } else if (player.getWeaponEquipped().equals(Spear)) {
+        } else if (player.getWeaponEquipped() == Spear) {
             return new Sword();
-        } else if (player.getWeaponEquipped().equals(Sword)) {
+        } else if (player.getWeaponEquipped() == Sword) {
             return new Halberd();
-        } else if (player.getWeaponEquipped().equals(Halberd)) {
+        } else if (player.getWeaponEquipped() == Halberd) {
             return new Flail();
-        } else if (player.getWeaponEquipped().equals(Flail)) {
+        } else if (player.getWeaponEquipped() == Flail) {
             return new Longsword();
-        } else if (player.getWeaponEquipped().equals(Longsword)) {
+        } else if (player.getWeaponEquipped() == Longsword) {
             return new Broadsword();
-        } else if (player.getWeaponEquipped().equals(Broadsword)){
+        } else if (player.getWeaponEquipped() == Broadsword){
             return new Lightsaber();
         }
         return null;

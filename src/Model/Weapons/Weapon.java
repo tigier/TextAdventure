@@ -19,4 +19,5 @@ public abstract class Weapon {
     public int getStrength(){
         return this.strength;
     }
+
 }
