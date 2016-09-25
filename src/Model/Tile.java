@@ -20,7 +20,7 @@ public class Tile {
         return monster;
     }
     public Weapon getWeapon() {
-        return getWeapon();
+        return weapon;
     }
     public void clear() {
         monster = null;
