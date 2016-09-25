@@ -24,30 +24,22 @@ public class FightHandler {
     }
 
     public void escape(){
-        tile = map.getPosition();
-        monster = tile.getMonster();
-        double escape = Math.random()*99+1;
-        if (monster.getStrength() > strength) {
-            escapeChance = Math.random()*49+1;
-        }
-        else if (strength > monster.getStrength())
-        {
-            escapeChance = Math.random()*99+50;
-        }
-
+        player.setXPos(map.getOldTile().getX());
+        player.setYPos(map.getOldTile().getY());
     }
 
     public void fight(){
         tile = map.getPosition();
         monster = tile.getMonster();
         weapon = player.getWeaponEquipped();
-        if ((player.getStrength()+weapon.getStrength()) > monster.getStrength()){
+        if ((player.getStrength()+weapon.getStrength()) >= monster.getStrength()){
             fightWon(this.tile);
         }
-        if ((player.getStrength()+weapon.getStrength()) > monster.getStrength()){
+        if ((player.getStrength()+weapon.getStrength()) < monster.getStrength()){
             fightLost();
         }
     }
+
     public void fightWon(Tile tile){
         tile.clear();
         player.setTilesCleared(player.getTilesCleared()+1);
