@@ -22,7 +22,7 @@ public class MainView2 extends JFrame{
     private JButton dodgeButton;
     Control control = new Control();
 
-    public TextAdventure() {
+    public MainView2() {
         super("Text Adventure");
         this.setContentPane(actionPanel);
         this.pack();
