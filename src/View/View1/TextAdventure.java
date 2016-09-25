@@ -3,16 +3,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import Control.FightHandler;
 import Control.Control;
-import Model.Monster.*;
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import Control.FightHandler;
-import Control.Control;
-import Model.Monster.*;
 public class TextAdventure extends JFrame{
 
     private JPanel actionPanel;
@@ -22,6 +14,7 @@ public class TextAdventure extends JFrame{
     private JButton EButton;
     public JTextArea textArea;
     Control control = new Control();
+    boolean fight = false;
 
 
 
@@ -66,10 +59,10 @@ public class TextAdventure extends JFrame{
         if (control.getPlayer().getTilesCleared() == 0) {
             textArea.setText(textArea.getText() + StartMessage());
             control.getPlayer().clearTile();
-        } else if (control.map.getPosition().getMonster() != null) {
+        } else if (control.map.getTile().getMonster() != null) {
             textArea.setText(textArea.getText() + actionMessageM());
         }
-        else if(control.map.getPosition().getWeapon() != null){
+        else if(control.map.getTile().getWeapon() != null){
             textArea.setText(textArea.getText()+actionMessageW());
         }
         else{
@@ -82,7 +75,7 @@ public class TextAdventure extends JFrame{
     }
 
     public String actionMessage(){
-        if (control.map.getPosition().getCleared() == false){
+        if (control.map.getTile().getCleared() == false){
             return "Keep going!"+"\n"+"Here is nothing to see.";
         }
         else{
@@ -90,28 +83,28 @@ public class TextAdventure extends JFrame{
         }
     }
     public String actionMessageM(){
-        if (control.map.getPosition().getMonster().getName() == "Slime"){
+        if (control.map.getTile().getMonster().getName() == "Slime"){
             return "You have encountered:"+"\n"+"A smelling pile of goo!";
         }
-        else if (control.map.getPosition().getMonster().getName() == "Goblin"){
+        else if (control.map.getTile().getMonster().getName() == "Goblin"){
             return "You have encountered:"+"\n"+"An ugly lilliputian!";
         }
-        else if (control.map.getPosition().getMonster().getName() == "SlimeKing"){
+        else if (control.map.getTile().getMonster().getName() == "SlimeKing"){
             return "You have encountered:"+"\n"+"A royal pile of goo!";
         }
-        else if (control.map.getPosition().getMonster().getName() == "Ogre"){
+        else if (control.map.getTile().getMonster().getName() == "Ogre"){
             return "You have encountered:"+"\n"+"A green swamp guy!";
         }
-        else if (control.map.getPosition().getMonster().getName() == "Orc"){
+        else if (control.map.getTile().getMonster().getName() == "Orc"){
             return "You have encountered:"+"\n"+"An ugly face ,who really needs an orthodontist!";
         }
-        else if (control.map.getPosition().getMonster().getName() == "Golem"){
+        else if (control.map.getTile().getMonster().getName() == "Golem"){
             return "You have encountered:"+"\n"+"A living mountain!!!";
         }
-        else if (control.map.getPosition().getMonster().getName() == "Demon"){
+        else if (control.map.getTile().getMonster().getName() == "Demon"){
             return "You have encountered:"+"\n"+"A GODDAMN SERVANT OF HELL!!!!!!!!!!!!!!.....REALLY ANTHONY!?!?!?!"+"\n"+"YOU THOUGHT THAT WAS A GOOD IDEA?";
         }
-        else if (control.map.getPosition().getMonster().getName() == "Dragon"){
+        else if (control.map.getTile().getMonster().getName() == "Dragon"){
             return "You have encountered:"+"\n"+"A GODDAMN DRAGON!!!!!...You programmers are Crazy!!!";
         }
         else{
@@ -120,5 +113,9 @@ public class TextAdventure extends JFrame{
     }
     public String actionMessageW(){
         return null;
+    }
+
+    public void fight(){
+        fight = true;
     }
 }
