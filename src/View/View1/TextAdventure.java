@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import Control.FightHandler;
 import Control.Control;
+import Model.Monster.*;
 
 public class TextAdventure extends JFrame{
 
@@ -76,8 +77,30 @@ public class TextAdventure extends JFrame{
         else if (control.map.getPosition().getMonster() == null && control.map.getPosition().getWeapon() == null && control.map.getPosition().getCleared() == true){
             return "This place seems familiar."+"\n"+"Nothing here tho.";
         }
-        else if (control.map.getPosition().getMonster() ==){
-
+        else if (control.map.getPosition().getMonster() == Slime){
+            return "You have encountered:"+"\n"+"A smelling pile of goo!";
         }
+        else if (control.map.getPosition().getMonster() == Goblin){
+            return "You have encountered:"+"\n"+"An ugly lilliputian!";
+        }
+        else if (control.map.getPosition().getMonster() == SlimeKing){
+            return "You have encountered:"+"\n"+"A royal pile of goo!";
+        }
+        else if (control.map.getPosition().getMonster() == Ogre){
+            return "You have encountered:"+"\n"+"A green swamp guy!";
+        }
+        else if (control.map.getPosition().getMonster() == Orc){
+            return "You have encountered:"+"\n"+"An ugly face ,who really needs an orthodontist!";
+        }
+        else if (control.map.getPosition().getMonster() == Golem){
+            return "You have encountered:"+"\n"+"A motherfucking mountain!!!";
+        }
+        else if (control.map.getPosition().getMonster() == Demon){
+            return "You have encountered:"+"\n"+"A GODDAMN SERVANT OF HELL!!!!!!!!!!!!!!.....REALLY ANTHONY!?!?!?!"+"\n"+"YOU THOUGHT THAT WAS A GOOD IDEA?";
+        }
+        else if (control.map.getPosition().getMonster() == Dragon){
+            return "You have encountered:"+"\n"+"A GODDAMN DRAGON!!!!!...You programmers are Crazy!!!";
+        }
+
     }
 }
