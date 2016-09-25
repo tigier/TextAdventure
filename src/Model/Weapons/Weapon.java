@@ -20,4 +20,7 @@ public abstract class Weapon {
         return this.strength;
     }
 
+    public String getName() {
+        return name;
+    }
 }

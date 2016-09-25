@@ -15,26 +15,19 @@ public class Control {
 
 
     public void movePlayer(String direction){
-        if (direction.equals("North")){
+        if (direction.equals("North")) {
             map.getPlayer().moveToNorth();
-            if(map.mapArray){
+            if (map.getMapArray()) {
+            } else if (direction.equals("South")) {
+                map.getPlayer().moveToSouth();
+            } else if (direction.equals("East")) {
+                map.getPlayer().moveToEast();
+            } else if (direction.equals("West")) {
+                map.getPlayer().moveToWest();
+            }
         }
-        else if (direction.equals("South"))
-        {
-            map.getPlayer().moveToSouth();
-        }
-        else if (direction.equals("East"))
-        {
-            map.getPlayer().moveToEast();
-        }
-        else if (direction.equals("West")){
-            map.getPlayer().moveToWest();
-        }
-    }
 
         public Player getPlayer(){
             return player;
     }
-
-
 }

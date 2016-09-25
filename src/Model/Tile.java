@@ -9,8 +9,7 @@ public class Tile {
     Weapon weapon;
     Monster monster;
     Player player;
-    boolean cleared;
-
+    boolean cleared = false;
     public Tile(int x, int y, Weapon weapon, Monster monster, Player player) {
         this.x = x;
         this.y = y;
@@ -27,7 +26,10 @@ public class Tile {
     public void clear() {
         monster = null;
         weapon = null;
-        cleared = true;
+        cleared =true;
+    }
+    public boolean getCleared(){
+        return cleared;
     }
 
     public int getY() {
@@ -42,14 +44,6 @@ public class Tile {
         return x;
     }
 
-    public boolean getCleared(){
-        if (monster.equals(null) && weapon.equals(null)){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
     public void setX(int x) {
         this.x = x;
     }

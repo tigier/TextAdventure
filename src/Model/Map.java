@@ -40,4 +40,8 @@ public class Map {
     public Player getPlayer() {
         return player;
     }
+
+    public Tile[][] getMapArray() {
+        return mapArray;
+    }
 }
