@@ -7,6 +7,13 @@ import java.awt.event.ActionListener;
 import Control.FightHandler;
 import Control.Control;
 import Model.Monster.*;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import Control.FightHandler;
+import Control.Control;
+import Model.Monster.*;
 
 public class MainView2 extends JFrame{
     private JPanel actionPanel;
@@ -58,13 +65,18 @@ public class MainView2 extends JFrame{
 
 
     public void setConsole(){
-        textArea1.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n"+"\n");
-        if(control.getPlayer().getTilesCleared() == 0) {
-            textArea1.setText(textArea1.getText() + StartMessage());
+        textArea1.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n" + "\n");
+        if (control.getPlayer().getTilesCleared() == 0) {
+            textArea3.setText(textArea3.getText() + StartMessage());
             control.getPlayer().clearTile();
+        } else if (control.map.getPosition().getMonster() != null) {
+            textArea2.setText(textArea2.getText() + actionMessageM());
+        }
+        else if(control.map.getPosition().getWeapon() != null){
+            textArea2.setText(textArea2.getText()+actionMessageW());
         }
         else{
-            textArea3.setText(textArea3.getText()+actionMessage());
+            textArea2.setText(textArea2.getText()+actionMessage());
         }
     }
 
@@ -73,36 +85,45 @@ public class MainView2 extends JFrame{
     }
 
     public String actionMessage(){
-        if (control.map.getPosition().getMonster() == null && control.map.getPosition().getWeapon() == null && control.map.getPosition().getCleared() == false){
+        if (control.map.getPosition().getCleared() == false){
             return "Keep going!"+"\n"+"Here is nothing to see.";
         }
-        else if (control.map.getPosition().getMonster() == null && control.map.getPosition().getWeapon() == null && control.map.getPosition().getCleared() == true){
+        else{
             return "This place seems familiar."+"\n"+"Nothing here tho.";
         }
-        else if (control.map.getPosition().getMonster() == Slime){
+    }
+
+    public String actionMessageM(){
+        if (control.map.getPosition().getMonster().getName() == "Slime"){
             return "You have encountered:"+"\n"+"A smelling pile of goo!";
         }
-        else if (control.map.getPosition().getMonster() == Goblin){
+        else if (control.map.getPosition().getMonster().getName() == "Goblin"){
             return "You have encountered:"+"\n"+"An ugly lilliputian!";
         }
-        else if (control.map.getPosition().getMonster() == SlimeKing){
+        else if (control.map.getPosition().getMonster().getName() == "SlimeKing"){
             return "You have encountered:"+"\n"+"A royal pile of goo!";
         }
-        else if (control.map.getPosition().getMonster() == Ogre){
+        else if (control.map.getPosition().getMonster().getName() == "Ogre"){
             return "You have encountered:"+"\n"+"A green swamp guy!";
         }
-        else if (control.map.getPosition().getMonster() == Orc){
+        else if (control.map.getPosition().getMonster().getName() == "Orc"){
             return "You have encountered:"+"\n"+"An ugly face ,who really needs an orthodontist!";
         }
-        else if (control.map.getPosition().getMonster() == Golem){
-            return "You have encountered:"+"\n"+"A motherfucking mountain!!!";
+        else if (control.map.getPosition().getMonster().getName() == "Golem"){
+            return "You have encountered:"+"\n"+"A living mountain!!!";
         }
-        else if (control.map.getPosition().getMonster() == Demon){
+        else if (control.map.getPosition().getMonster().getName() == "Demon"){
             return "You have encountered:"+"\n"+"A GODDAMN SERVANT OF HELL!!!!!!!!!!!!!!.....REALLY ANTHONY!?!?!?!"+"\n"+"YOU THOUGHT THAT WAS A GOOD IDEA?";
         }
-        else if (control.map.getPosition().getMonster() == Dragon){
+        else if (control.map.getPosition().getMonster().getName() == "Dragon"){
             return "You have encountered:"+"\n"+"A GODDAMN DRAGON!!!!!...You programmers are Crazy!!!";
         }
+        else{
+            return null;
+        }
+    }
 
+    public String actionMessageW(){
+        return null;
     }
 }
