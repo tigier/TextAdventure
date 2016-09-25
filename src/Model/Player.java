@@ -6,7 +6,7 @@ public class Player {
     int strength = 5;
     public int xPos;
     public int yPos;
-    Weapon weaponEquipped = God.createWeapon(0);
+    Weapon weaponEquipped = God.createWeapon(this);
     int tilesCleared = 0;
 
     public void Player(int xPos, int yPos){
@@ -28,7 +28,7 @@ public class Player {
         this.tilesCleared = tilesCleared;
     }
     public void setWeaponEquipped(int type){
-        this.weaponEquipped = God.createWeapon(type);
+        this.weaponEquipped = God.createWeapon(this);
     }
 
     //get-Methods
@@ -43,6 +43,9 @@ public class Player {
     }
     public int getTilesCleared(){
         return tilesCleared;
+    }
+    public Weapon getWeaponEquipped() {
+        return weaponEquipped;
     }
 
     //Control
