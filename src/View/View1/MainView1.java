@@ -105,28 +105,28 @@ public class MainView1 extends JFrame{
         }
     }
     public String actionMessageM(){
-        if (control.map.getTile().getMonster().getName() == "Slime"){
+        if (control.map.getTile().getMonster().getName().equals("Slime")){
             return "You have encountered:"+"\n"+"A smelling pile of goo!";
         }
-        else if (control.map.getTile().getMonster().getName() == "Goblin"){
+        else if (control.map.getTile().getMonster().getName().equals("Goblin")){
             return "You have encountered:"+"\n"+"An ugly lilliputian!";
         }
-        else if (control.map.getTile().getMonster().getName() == "SlimeKing"){
+        else if (control.map.getTile().getMonster().getName().equals("SlimeKing")){
             return "You have encountered:"+"\n"+"A royal pile of goo!";
         }
-        else if (control.map.getTile().getMonster().getName() == "Ogre"){
+        else if (control.map.getTile().getMonster().getName().equals("Ogre")){
             return "You have encountered:"+"\n"+"A green swamp guy!";
         }
-        else if (control.map.getTile().getMonster().getName() == "Orc"){
+        else if (control.map.getTile().getMonster().getName().equals("Orc")){
             return "You have encountered:"+"\n"+"An ugly face ,who really needs an orthodontist!";
         }
-        else if (control.map.getTile().getMonster().getName() == "Golem"){
+        else if (control.map.getTile().getMonster().getName().equals("Golem")){
             return "You have encountered:"+"\n"+"A living mountain!!!";
         }
-        else if (control.map.getTile().getMonster().getName() == "Demon"){
+        else if (control.map.getTile().getMonster().getName().equals("Demon")){
             return "You have encountered:"+"\n"+"A GODDAMN SERVANT OF HELL!!!!!!!!!!!!!!.....REALLY ANTHONY!?!?!?!"+"\n"+"YOU THOUGHT THAT WAS A GOOD IDEA?";
         }
-        else if (control.map.getTile().getMonster().getName() == "Dragon"){
+        else if (control.map.getTile().getMonster().getName().equals("Dragon")){
             return "You have encountered:"+"\n"+"A GODDAMN DRAGON!!!!!...You programmers are Crazy!!!";
         }
         else{
@@ -135,7 +135,7 @@ public class MainView1 extends JFrame{
     }
 
     public String actionMessageW(){
-        return null;
+        return "yay.....a new weapon!";
     }
 
     public void fight(){
