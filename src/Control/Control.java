@@ -6,9 +6,10 @@ import Model.Player;
 public class Control {
     FightHandler fH;
     public Map map;
-    Player player = new Player();
+    Player player;
 
     public Control(){
+        player = new Player();
         map = new Map(player);
     }
 

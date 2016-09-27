@@ -11,16 +11,10 @@ public class FightHandler {
     Tile tile;
     Monster monster;
     Weapon weapon;
-    int strength;
-    double escapeChance;
 
     public FightHandler(Player player, Map map) {
         this.player = player;
         this.map = map;
-    }
-
-    public void FightHandler(Player player){
-        strength = player.getStrength();
     }
 
     public void escape(){

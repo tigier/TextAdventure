@@ -36,9 +36,9 @@ public class MainView1 extends JFrame{
                     }
                 } else if (fight == true){
                     if (fH.fight() == true){
-                        textArea.setText(textArea.getText()+"You got 'em! Keep going.");
+                        textArea.setText(textArea.getText()+" You got 'em! Keep going.");
                     } else if (fH.fight() == false)
-                        textArea.setText(textArea.getText()+"Wow you got R3KT. Learn to play, noob.");
+                        textArea.setText(textArea.getText()+" Wow you got R3KT. Learn to play, noob.");
                 }
             }
         });
@@ -59,7 +59,6 @@ public class MainView1 extends JFrame{
                     fH.escape();
                     textArea.setText(textArea.getText()+"You moved backwards to the Tile which you just left. Pussy.");
                 }
-
             }
         });
         WButton.addActionListener(new ActionListener() {

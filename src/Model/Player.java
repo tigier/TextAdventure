@@ -10,9 +10,7 @@ public class Player {
     int tilesCleared = 0;
 
 
-    public void Player(int xPos, int yPos){
-        this.xPos = xPos;
-        this.yPos = yPos;
+    public Player(){
         weaponEquipped = new Knife();
     }
 
