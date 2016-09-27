@@ -43,7 +43,10 @@ public class Map {
                 spawnWeapon = God.createWeapon(whatWeaponToSpawn());
             }
             else if (whatToSpawn > 10){
-                spawnMonster = God.createMonster(whatMonsterToSpawn());
+                spawnMonster = God.createMonster(whatMonsterToSpawn(),additionalStrength());
+                if (spawnMonster.getStrength() < 1){
+                    spawnMonster.setStrength(1);
+                }
             }
         }
         mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),spawnWeapon,spawnMonster,this.player);
@@ -98,8 +101,13 @@ public class Map {
             return 7;
         }
     }
+    public int additionalStrength(){
+        int kot = player.getTilesCleared()+ (int)((Math.random()*40)-20);
+        return kot;
+    }
     public int whatWeaponToSpawn(){
         int thisOne = (player.getWeaponEquipped().getType()+1);
         return thisOne;
     }
+
 }

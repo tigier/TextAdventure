@@ -34,23 +34,23 @@ public class God {
         return null;
     }
 
-    public static Monster createMonster(int type){
+    public static Monster createMonster(int type, int addStrength){
         if (type == 0){
-            return new Slime(); //10
+            return new Slime(addStrength); //10
         } else if (type == 1) {
-            return new Goblin(); // 10
+            return new Goblin(addStrength); // 10
         } else if (type == 2) {
-            return new SlimeKing(); //15
+            return new SlimeKing(addStrength); //15
         } else if (type == 3) {
-            return new Ogre(); //15
+            return new Ogre(addStrength); //15
         } else if (type == 4) {
-            return new Orc(); //20
+            return new Orc(addStrength); //20
         } else if (type == 5) {
-            return new Golem(); //15
+            return new Golem(addStrength); //15
         } else if (type == 6) {
-            return new Dragon(); //10
+            return new Dragon(addStrength); //10
         } else if (type == 7) {
-            return new Demon(); //5
+            return new Demon(addStrength); //5
         }
         return null;
     }
