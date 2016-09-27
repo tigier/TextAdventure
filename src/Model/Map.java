@@ -1,9 +1,16 @@
 package Model;
+import Control.God;
+import Model.Weapons.*;
+import Model.Monster.*;
 
 public class Map {
     private Player player;
     Tile[][] mapArray = new Tile[1][1];
     Tile oldTile;
+    int spawnChance;
+    int whatToSpawn;
+    Weapon spawnWeapon;
+    Monster spawnMonster;
 
     public Map(Player player) {
         this.player = player;
@@ -29,6 +36,16 @@ public class Map {
     }
 //hi
     public void tileGeneration(){
+        spawnChance = (int)(Math.random()*99+1);
+        whatToSpawn = (int)(Math.random()*99+1);
+        if (spawnChance > 40){
+            if (whatToSpawn <= 10){
+                spawnWeapon = God.createWeapon(whatWeaponToSpawn());
+            }
+            else if (whatToSpawn > 10){
+                spawnMonster = God.createMonster(whatMonsterToSpawn());
+            }
+        }
         mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),null,null,this.player);
     }
 
@@ -45,7 +62,6 @@ public class Map {
     public Tile[][] getMapArray() {
         return mapArray;
     }
-    //lalalala
 
     public int whatMonsterToSpawn(){
         if (player.getStrength()+player.getWeaponEquipped().getStrength() <= 30){
@@ -58,7 +74,7 @@ public class Map {
             }
             if (thisMonster > 50 && thisMonster <= 75){
                 return 2;
-            }
+            }//kot
             if (thisMonster > 75){
                 return 3;
             }
