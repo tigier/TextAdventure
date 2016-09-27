@@ -30,6 +30,7 @@ public class FightHandler {
         weapon = player.getWeaponEquipped();
         if ((player.getStrength()+weapon.getStrength()) > monster.getStrength()){
             fightWon(this.tile);
+            player.setStrength(player.getStrength()+5);
             return true;
         }
         else

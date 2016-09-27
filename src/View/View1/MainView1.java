@@ -181,7 +181,7 @@ public class MainView1 extends JFrame{
 
     // Ausgabetext, wenn man auf eine Waffe stößt
     public String actionMessageW(){
-        return "yay.....a new weapon!"+" New strength:"+(control.getPlayer().getStrength()+control.getPlayer().getWeaponEquipped().getStrength());
+        return "yay...a new weapon: "+control.getPlayer().getWeaponEquipped().getName()+"\n"+" New strength:"+(control.getPlayer().getStrength()+control.getPlayer().getWeaponEquipped().getStrength());
     }
 
     // set-Methode
