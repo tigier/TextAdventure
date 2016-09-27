@@ -3,6 +3,7 @@ package Model;
 public class Map {
     private Player player;
     Tile[][] mapArray = new Tile[1][1];
+    Tile[][] mapArrayN= new Tile[0][0];
     Tile oldTile;
 
     public Map(Player player) {
@@ -13,16 +14,14 @@ public class Map {
     //TODO contents
     public void extendArray(int w){
         if(w == 0) {
-            oldTile = getTile();
-            Tile[][] dummy = new Tile[mapArray.length + 1][mapArray[0].length];
+            Tile[][] dummy = new Tile[player.getYPos() + 1][mapArray[0].length];
             System.arraycopy(mapArray, 0, dummy, 0, mapArray.length);
-            System.arraycopy(mapArray[0], 0, dummy[0], 0, mapArray[0].length);
+            for (int i = mapArray.length; 0 < i; i--) {
+                System.arraycopy(mapArray[i - 1], 0, dummy[i - 1], 0, mapArray[i - 1].length);
+            }
             mapArray = dummy;
-            mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),null,null,this.player);
-            System.out.print(mapArray.length);
         }
         else if (w == 1){
-            oldTile = getTile();
             Tile[][] dummy = new Tile[mapArray.length][mapArray[1].length + 1];
             System.arraycopy(mapArray,0,dummy,0,mapArray.length);
             System.arraycopy(mapArray[1],0,dummy[1],0,mapArray[1].length);
@@ -30,6 +29,11 @@ public class Map {
             mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),null,null,this.player);
             System.out.print(mapArray[1].length);
         }
+    }
+
+    public void tileGeneration(){
+        mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),null,null,this.player);
+        System.out.print(mapArray.length);
     }
 
     public Tile getTile(){
@@ -40,5 +44,9 @@ public class Map {
     }
     public Tile getOldTile() {
         return oldTile;
+    }
+
+    public Tile[][] getMapArray() {
+        return mapArray;
     }
 }

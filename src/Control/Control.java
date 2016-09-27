@@ -17,11 +17,21 @@ public class Control {
     public void movePlayer(String direction){
         if (direction.equals("North")) {
             map.getPlayer().moveToNorth();
-        } else if (direction.equals("South")) {
+            if(map.getMapArray().length-1 < player.getXPos()) {
+                map.extendArray(0);
+            }
+            map.tileGeneration();
+        }
+        else if (direction.equals("South")) {
             map.getPlayer().moveToSouth();
-        } else if (direction.equals("East")) {
+        }
+        else if (direction.equals("East")) {
             map.getPlayer().moveToEast();
-        } else if (direction.equals("West")) {
+            if(map.getMapArray()[0].length-1 < player.getXPos()) {
+                map.extendArray(1);
+            }
+        }
+        else if (direction.equals("West")) {
             map.getPlayer().moveToWest();
         }
     }

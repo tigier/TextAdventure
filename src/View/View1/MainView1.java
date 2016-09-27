@@ -28,6 +28,9 @@ public class MainView1 extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 control.movePlayer("North");
                 setConsole();
+                if (control.map.getTile().getWeapon() ==(null) && control.map.getTile().getMonster() == (null)){
+                    control.map.getTile().clear();
+                }
             }
         });
         SButton.addActionListener(new ActionListener() {
@@ -55,7 +58,11 @@ public class MainView1 extends JFrame{
         if (control.getPlayer().getTilesCleared() == 0) {
             textArea.setText(textArea.getText() + StartMessage());
             control.getPlayer().clearTile();
-        } else if (control.map.getTile().getMonster() != null) {
+        }
+        else if (control.map.getTile().getX()== 0 && control.map.getTile().getY() == 0){
+            textArea.setText(textArea.getText() + "Nothing here!" + "\n" + "Just a big sign saying spawn.");
+        }
+        else if (control.map.getTile().getMonster() != null) {
             textArea.setText(textArea.getText() + actionMessageM());
         }
         else if(control.map.getTile().getWeapon() != null){
