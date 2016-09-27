@@ -18,12 +18,12 @@
     <node x="-15390.25" y="-5261.25">View.ViewStart.TextAdventure</node>
     <node x="-15777.75" y="-6297.75">Model.Weapons.Shortsword</node>
     <node x="-15924.75" y="-6297.75">Model.Weapons.Broadsword</node>
-    <node x="263.0" y="1410.0">MainProgram</node>
+    <node x="-15567.0" y="-5549.166666666666">MainProgram</node>
     <node x="-14572.25" y="-5810.75">View.View1.MainView1</node>
-    <node x="-15433.75" y="-5533.75">Control.FightHandler</node>
+    <node x="-15303.75" y="-5849.464285714286">Control.FightHandler</node>
     <node x="-16473.75" y="-5927.5">Model.Tile</node>
     <node x="-15633.75" y="-6297.75">Model.Weapons.Sword</node>
-    <node x="-15410.25" y="-5710.0">Control.Control</node>
+    <node x="-15568.82142857143" y="-5865.714285714285">Control.Control</node>
     <node x="-14771.75" y="-6297.75">Model.Weapons.Flail</node>
     <node x="-15140.25" y="-6048.5">Model.Monster.Orc</node>
     <node x="-16453.75" y="-5664.25">Model.Map</node>
@@ -33,7 +33,7 @@
     <node x="-15404.25" y="-6048.5">Model.Monster.Dragon</node>
     <node x="-16043.75" y="-6297.75">Model.Weapons.Scythe</node>
     <node x="-15816.25" y="-6048.5">Model.Monster.SlimeKing</node>
-    <node x="0.0" y="1410.0">Control.God</node>
+    <node x="-15300.0" y="-5562.023809523808">Control.God</node>
     <node x="-15405.0" y="-6505.75">Model.Weapons.Weapon</node>
   </nodes>
   <notes />
@@ -159,10 +159,8 @@
       <point x="109.54166666666674" y="59.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="-15588.0" y="-5585.0" />
-  <SelectedNodes>
-    <node>View.View1.MainView1</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="-14793.57142857143" y="-5501.0" />
+  <SelectedNodes />
   <Categories>
     <Category>Properties</Category>
     <Category>Methods</Category>
