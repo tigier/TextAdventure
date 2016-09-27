@@ -106,7 +106,6 @@ public class Map {
         } else {
             return 7;
         }
-
     }
     public int whatWeaponToSpawn(){
         int thisOne = (player.getWeaponEquipped().getType()+1);
