@@ -31,21 +31,17 @@ public class FightHandler {
         if ((player.getStrength()+weapon.getStrength()) > monster.getStrength()){
             fightWon(this.tile);
             return true;
-        } else if ((player.getStrength()+weapon.getStrength()) <= monster.getStrength()){
-            fightLost();
+        }
+        else
+        {
             return false;
         }
-        return false;
     }
 
     // "Räumung" des Feldes, nach einem gewonnenen Kampf.
     public void fightWon(Tile tile){
         tile.clear();
         player.setTilesCleared(player.getTilesCleared()+1);
-    }
-
-    public void fightLost(){
-
     }
 
 }

@@ -40,10 +40,18 @@ public class MainView1 extends JFrame{
                 } else if (fight == true){
                     if (fH.fight() == true){
                         textArea.setText(textArea.getText()+" You got 'em! Keep going.");
+                        fight = false;
                         setButtons(false);
                     } else if (fH.fight() == false){
                         textArea.setText(textArea.getText()+" Wow you got R3KT. Learn to play, noob.");
-                        setButtons(false);
+                        NButton.setText("Beaten by a code..");
+                        SButton.setText("Noob");
+                        EButton.setText("L2P");
+                        WButton.setText("Loser");
+                        NButton.setEnabled(false);
+                        SButton.setEnabled(false);
+                        EButton.setEnabled(false);
+                        WButton.setEnabled(false);
                     }
                 }
             }
