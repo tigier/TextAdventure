@@ -3,461 +3,170 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="-10061.282216494845" y="-5709.0">Model.Monster.Monster</node>
-    <node x="-11150.0" y="-6132.0">Model.Weapons.Axe</node>
-    <node x="-11382.0" y="-6132.0">Model.Weapons.Spear</node>
-    <node x="-11743.0" y="-6132.0">Model.Weapons.Lightsaber</node>
-    <node x="-9277.375" y="-4580.0">View.View2.MainView2</node>
-    <node x="-10116.5" y="-5466.0">Model.Monster.Goblin</node>
-    <node x="-11046.0" y="-6132.0">Model.Weapons.Longsword</node>
-    <node x="-10633.0" y="-6132.0">Model.Weapons.Dagger</node>
-    <node x="-10358.5" y="-5466.0">Model.Monster.Golem</node>
-    <node x="-10468.5" y="-5466.0">Model.Monster.Ogre</node>
-    <node x="-9244.72268380358" y="-6132.0">Model.Weapons.Knife</node>
-    <node x="-9342.267866024597" y="-6031.0">Model.Player</node>
-    <node x="-11890.0" y="-4250.0">View.ViewStart.TextAdventure</node>
-    <node x="-10777.0" y="-6132.0">Model.Weapons.Shortsword</node>
-    <node x="-11890.0" y="-6132.0">Model.Weapons.Broadsword</node>
-    <node x="-9494.875" y="-4346.0">MainProgram</node>
-    <node x="-9539.375" y="-4580.0">View.View1.MainView1</node>
-    <node x="-9434.875" y="-4949.0">Control.FightHandler</node>
-    <node x="-9565.181017136914" y="-5533.0">Model.Tile</node>
-    <node x="-11604.0" y="-6132.0">Model.Weapons.Sword</node>
-    <node x="-9359.375" y="-4727.0">Control.Control</node>
-    <node x="-11487.0" y="-6132.0">Model.Weapons.Flail</node>
-    <node x="-10571.5" y="-5466.0">Model.Monster.Orc</node>
-    <node x="-9572.97268380358" y="-5228.0">Model.Map</node>
-    <node x="-10239.5" y="-5466.0">Model.Monster.Demon</node>
-    <node x="-10903.0" y="-6132.0">Model.Weapons.Halberd</node>
-    <node x="-9737.5" y="-5466.0">Model.Monster.Slime</node>
-    <node x="-9997.5" y="-5466.0">Model.Monster.Dragon</node>
-    <node x="-11269.0" y="-6132.0">Model.Weapons.Scythe</node>
-    <node x="-9874.5" y="-5466.0">Model.Monster.SlimeKing</node>
-    <node x="-10824.0" y="-5150.0">Control.God</node>
-    <node x="-11031.032216494845" y="-6360.0">Model.Weapons.Weapon</node>
+    <node x="-15400.75" y="-6223.25">Model.Monster.Monster</node>
+    <node x="-14875.75" y="-6297.75">Model.Weapons.Axe</node>
+    <node x="-14666.75" y="-6297.75">Model.Weapons.Spear</node>
+    <node x="-15136.75" y="-6297.75">Model.Weapons.Lightsaber</node>
+    <node x="-14562.25" y="-5481.25">View.View2.MainView2</node>
+    <node x="-15023.25" y="-6048.5">Model.Monster.Goblin</node>
+    <node x="-15279.75" y="-6297.75">Model.Weapons.Longsword</node>
+    <node x="-14997.75" y="-6297.75">Model.Weapons.Dagger</node>
+    <node x="-14890.25" y="-6048.5">Model.Monster.Golem</node>
+    <node x="-15528.25" y="-6048.5">Model.Monster.Ogre</node>
+    <node x="-15516.75" y="-6297.75">Model.Weapons.Knife</node>
+    <node x="-16447.5" y="-5380.0">Model.Player</node>
+    <node x="-15390.25" y="-5261.25">View.ViewStart.TextAdventure</node>
+    <node x="-15777.75" y="-6297.75">Model.Weapons.Shortsword</node>
+    <node x="-15924.75" y="-6297.75">Model.Weapons.Broadsword</node>
+    <node x="263.0" y="1410.0">MainProgram</node>
+    <node x="-14572.25" y="-5810.75">View.View1.MainView1</node>
+    <node x="-15433.75" y="-5533.75">Control.FightHandler</node>
+    <node x="-16473.75" y="-5927.5">Model.Tile</node>
+    <node x="-15633.75" y="-6297.75">Model.Weapons.Sword</node>
+    <node x="-15410.25" y="-5710.0">Control.Control</node>
+    <node x="-14771.75" y="-6297.75">Model.Weapons.Flail</node>
+    <node x="-15140.25" y="-6048.5">Model.Monster.Orc</node>
+    <node x="-16453.75" y="-5664.25">Model.Map</node>
+    <node x="-15665.25" y="-6048.5">Model.Monster.Demon</node>
+    <node x="-15405.75" y="-6297.75">Model.Weapons.Halberd</node>
+    <node x="-15267.25" y="-6048.5">Model.Monster.Slime</node>
+    <node x="-15404.25" y="-6048.5">Model.Monster.Dragon</node>
+    <node x="-16043.75" y="-6297.75">Model.Weapons.Scythe</node>
+    <node x="-15816.25" y="-6048.5">Model.Monster.SlimeKing</node>
+    <node x="0.0" y="1410.0">Control.God</node>
+    <node x="-15405.0" y="-6505.75">Model.Weapons.Weapon</node>
   </nodes>
   <notes />
   <edges>
     <edge source="Model.Monster.Slime" target="Model.Monster.Monster">
       <point x="0.0" y="-25.5" />
-      <point x="-9691.0" y="-5563.0" />
-      <point x="-9896.282216494845" y="-5563.0" />
-      <point x="44.0" y="48.0" />
+      <point x="-15213.75" y="-6068.5" />
+      <point x="-15264.625" y="-6068.5" />
+      <point x="15.125" y="48.0" />
     </edge>
     <edge source="Model.Weapons.Lightsaber" target="Model.Weapons.Weapon">
       <point x="0.0" y="-25.5" />
-      <point x="-11683.5" y="-6212.0" />
-      <point x="-11008.625966494845" y="-6212.0" />
-      <point x="-97.09375" y="59.0" />
-    </edge>
-    <edge source="Control.FightHandler" target="Model.Monster.Monster">
-      <point x="-118.0" y="-81.0" />
-      <point x="-9405.375" y="-4979.0" />
-      <point x="-9634.0" y="-4979.0" />
-      <point x="-9634.0" y="-5573.0" />
-      <point x="-9874.282216494845" y="-5573.0" />
-      <point x="66.0" y="48.0" />
-    </edge>
-    <edge source="Model.Monster.Monster" target="Model.Player">
-      <point x="-2.2737367544323206E-13" y="-48.0" />
-      <point x="-9940.282216494845" y="-5729.0" />
-      <point x="-9312.85119935793" y="-5729.0" />
-      <point x="-147.08333333333348" y="136.0" />
-    </edge>
-    <edge source="Control.FightHandler" target="Model.Map">
-      <point x="-59.0" y="-81.0" />
-      <point x="-9346.375" y="-4969.0" />
-      <point x="-9339.639350470246" y="-4969.0" />
-      <point x="93.33333333333348" y="114.5" />
+      <point x="-15077.25" y="-6327.75" />
+      <point x="-15255.625" y="-6327.75" />
+      <point x="29.875" y="59.0" />
     </edge>
     <edge source="Model.Weapons.Broadsword" target="Model.Weapons.Weapon">
       <point x="0.0" y="-25.5" />
-      <point x="-11826.5" y="-6222.0" />
-      <point x="-11023.563466494845" y="-6222.0" />
-      <point x="-112.03125" y="59.0" />
+      <point x="-15861.25" y="-6357.75" />
+      <point x="-15375.125" y="-6357.75" />
+      <point x="-89.625" y="59.0" />
     </edge>
     <edge source="Model.Weapons.Scythe" target="Model.Weapons.Weapon">
       <point x="0.0" y="-25.5" />
-      <point x="-11219.5" y="-6172.0" />
-      <point x="-10948.875966494845" y="-6172.0" />
-      <point x="-37.34375" y="59.0" />
-    </edge>
-    <edge source="Model.Map" target="Model.Tile">
-      <point x="70.0" y="-114.5" />
-      <point x="-9362.97268380358" y="-5248.0" />
-      <point x="-9331.431017136914" y="-5248.0" />
-      <point x="46.75" y="92.5" />
-    </edge>
-    <edge source="Model.Map" target="Model.Weapons.Weapon">
-      <point x="-70.0" y="-114.5" />
-      <point x="-9502.97268380358" y="-5258.0" />
-      <point x="-9595.75" y="-5258.0" />
-      <point x="-9595.75" y="-6182.0" />
-      <point x="-10859.250966494845" y="-6182.0" />
-      <point x="52.28125" y="59.0" />
-    </edge>
-    <edge source="MainProgram" target="View.View1.MainView1">
-      <point x="0.0" y="-25.5" />
-      <point x="0.0" y="92.0" />
-    </edge>
-    <edge source="Control.God" target="Model.Weapons.Axe">
-      <point x="-34.42105263157896" y="-36.5" />
-      <point x="-10749.421052631578" y="-5308.0" />
-      <point x="-11108.0" y="-5308.0" />
-      <point x="0.0" y="25.5" />
-    </edge>
-    <edge source="Control.Control" target="Model.Player">
-      <point x="60.0" y="-48.5" />
-      <point x="-9227.375" y="-4747.0" />
-      <point x="-9092.0" y="-4747.0" />
-      <point x="-9092.0" y="-5729.0" />
-      <point x="-9018.684532691263" y="-5729.0" />
-      <point x="147.08333333333348" y="136.0" />
+      <point x="-15994.25" y="-6367.75" />
+      <point x="-15395.041666666666" y="-6367.75" />
+      <point x="-109.54166666666669" y="59.0" />
     </edge>
     <edge source="Model.Monster.SlimeKing" target="Model.Monster.Monster">
       <point x="0.0" y="-25.5" />
-      <point x="-9816.0" y="-5553.0" />
-      <point x="-9918.282216494845" y="-5553.0" />
-      <point x="22.0" y="48.0" />
-    </edge>
-    <edge source="Control.God" target="Model.Monster.Orc">
-      <point x="22.947368421052715" y="-36.5" />
-      <point x="-10692.052631578947" y="-5318.0" />
-      <point x="-10530.0" y="-5318.0" />
-      <point x="0.0" y="25.5" />
+      <point x="-15750.75" y="-6098.5" />
+      <point x="-15385.625" y="-6098.5" />
+      <point x="-105.875" y="48.0" />
     </edge>
     <edge source="Model.Monster.Dragon" target="Model.Monster.Monster">
       <point x="0.0" y="-25.5" />
-      <point x="-9946.0" y="-5553.0" />
-      <point x="-9940.282216494845" y="-5553.0" />
-      <point x="0.0" y="48.0" />
-    </edge>
-    <edge source="View.View2.MainView2" target="Control.Control">
-      <point x="60.5" y="-92.0" />
-      <point x="-9095.875" y="-4610.0" />
-      <point x="-9233.375" y="-4610.0" />
-      <point x="54.0" y="48.5" />
-    </edge>
-    <edge source="Control.God" target="Model.Monster.Goblin">
-      <point x="68.84210526315792" y="-36.5" />
-      <point x="-10646.157894736842" y="-5278.0" />
-      <point x="-10067.0" y="-5278.0" />
-      <point x="0.0" y="25.5" />
-    </edge>
-    <edge source="Model.Weapons.Dagger" target="Model.Weapons.Weapon">
-      <point x="0.0" y="-25.5" />
-      <point x="-10582.0" y="-6172.0" />
-      <point x="-10874.188466494845" y="-6172.0" />
-      <point x="37.34375" y="59.0" />
+      <point x="-15345.75" y="-6068.5" />
+      <point x="-15294.875" y="-6068.5" />
+      <point x="-15.125" y="48.0" />
     </edge>
     <edge source="Model.Weapons.Axe" target="Model.Weapons.Weapon">
       <point x="0.0" y="-25.5" />
-      <point x="-11108.0" y="-6162.0" />
-      <point x="-10933.938466494845" y="-6162.0" />
-      <point x="-22.40625" y="59.0" />
+      <point x="-14833.75" y="-6347.75" />
+      <point x="-15215.791666666666" y="-6347.75" />
+      <point x="69.70833333333348" y="59.0" />
     </edge>
-    <edge source="Control.God" target="Model.Monster.Ogre">
-      <point x="34.42105263157896" y="-36.5" />
-      <point x="-10680.578947368422" y="-5308.0" />
-      <point x="-10423.5" y="-5308.0" />
-      <point x="0.0" y="25.5" />
+    <edge source="Model.Weapons.Dagger" target="Model.Weapons.Weapon">
+      <point x="0.0" y="-25.5" />
+      <point x="-14946.75" y="-6337.75" />
+      <point x="-15235.708333333334" y="-6337.75" />
+      <point x="49.79166666666674" y="59.0" />
     </edge>
     <edge source="Model.Monster.Golem" target="Model.Monster.Monster">
       <point x="0.0" y="-25.5" />
-      <point x="-10309.0" y="-5573.0" />
-      <point x="-10006.282216494845" y="-5573.0" />
-      <point x="-66.0" y="48.0" />
-    </edge>
-    <edge source="Control.FightHandler" target="Model.Weapons.Weapon">
-      <point x="118.0" y="-81.0" />
-      <point x="-9169.375" y="-4969.0" />
-      <point x="-8978.767866024597" y="-4969.0" />
-      <point x="-8978.767866024597" y="-6222.0" />
-      <point x="-10799.500966494845" y="-6222.0" />
-      <point x="112.03125" y="59.0" />
+      <point x="-14833.75" y="-6098.5" />
+      <point x="-15173.875" y="-6098.5" />
+      <point x="105.875" y="48.0" />
     </edge>
     <edge source="Model.Weapons.Flail" target="Model.Weapons.Weapon">
       <point x="0.0" y="-25.5" />
-      <point x="-11444.5" y="-6192.0" />
-      <point x="-10978.750966494845" y="-6192.0" />
-      <point x="-67.21875" y="59.0" />
+      <point x="-14729.25" y="-6357.75" />
+      <point x="-15195.875" y="-6357.75" />
+      <point x="89.62500000000011" y="59.0" />
     </edge>
     <edge source="Model.Monster.Ogre" target="Model.Monster.Monster">
       <point x="0.0" y="-25.5" />
-      <point x="-10423.5" y="-5583.0" />
-      <point x="-10028.282216494845" y="-5583.0" />
-      <point x="-88.0" y="48.0" />
-    </edge>
-    <edge source="Control.God" target="Model.Monster.Golem">
-      <point x="45.8947368421052" y="-36.5" />
-      <point x="-10669.105263157895" y="-5298.0" />
-      <point x="-10309.0" y="-5298.0" />
-      <point x="0.0" y="25.5" />
+      <point x="-15476.25" y="-6078.5" />
+      <point x="-15325.125" y="-6078.5" />
+      <point x="-45.375" y="48.0" />
     </edge>
     <edge source="Model.Weapons.Halberd" target="Model.Weapons.Weapon">
       <point x="0.0" y="-25.5" />
-      <point x="-10850.0" y="-6152.0" />
-      <point x="-10904.063466494845" y="-6152.0" />
-      <point x="7.46875" y="59.0" />
-    </edge>
-    <edge source="Model.Tile" target="Model.Weapons.Weapon">
-      <point x="0.0" y="-92.5" />
-      <point x="-9378.181017136914" y="-5553.0" />
-      <point x="-9356.657216494845" y="-5553.0" />
-      <point x="-9356.657216494845" y="-6192.0" />
-      <point x="-10844.313466494845" y="-6192.0" />
-      <point x="67.21875" y="59.0" />
-    </edge>
-    <edge source="Control.FightHandler" target="Model.Player">
-      <point x="59.0" y="-81.0" />
-      <point x="-9228.375" y="-4979.0" />
-      <point x="-9133.911150298427" y="-4979.0" />
-      <point x="-9133.911150298427" y="-5729.0" />
-      <point x="-9136.35119935793" y="-5729.0" />
-      <point x="29.416666666666515" y="136.0" />
-    </edge>
-    <edge source="Model.Tile" target="Model.Player">
-      <point x="124.66666666666652" y="-92.5" />
-      <point x="-9253.514350470246" y="-5553.0" />
-      <point x="-9281.767866024598" y="-5553.0" />
-      <point x="-9281.767866024598" y="-5729.0" />
-      <point x="-9254.017866024597" y="-5729.0" />
-      <point x="-88.25" y="136.0" />
+      <point x="-15352.75" y="-6317.75" />
+      <point x="-15295.458333333334" y="-6317.75" />
+      <point x="-9.958333333333258" y="59.0" />
     </edge>
     <edge source="Model.Weapons.Sword" target="Model.Weapons.Weapon">
       <point x="0.0" y="-25.5" />
-      <point x="-11555.5" y="-6202.0" />
-      <point x="-10993.688466494845" y="-6202.0" />
-      <point x="-82.15625" y="59.0" />
-    </edge>
-    <edge source="Control.God" target="Model.Monster.Demon">
-      <point x="57.368421052631675" y="-36.5" />
-      <point x="-10657.631578947368" y="-5288.0" />
-      <point x="-10188.0" y="-5288.0" />
-      <point x="0.0" y="25.5" />
-    </edge>
-    <edge source="Model.Map" target="Model.Player">
-      <point x="116.66666666666652" y="-114.5" />
-      <point x="-9316.306017136914" y="-5248.0" />
-      <point x="-9144.911150298427" y="-5248.0" />
-      <point x="-9144.911150298427" y="-5729.0" />
-      <point x="-9195.184532691263" y="-5729.0" />
-      <point x="-29.416666666666515" y="136.0" />
+      <point x="-15585.25" y="-6337.75" />
+      <point x="-15335.291666666666" y="-6337.75" />
+      <point x="-49.79166666666663" y="59.0" />
     </edge>
     <edge source="Model.Weapons.Longsword" target="Model.Weapons.Weapon">
       <point x="0.0" y="-25.5" />
-      <point x="-10984.5" y="-6152.0" />
-      <point x="-10919.000966494845" y="-6152.0" />
-      <point x="-7.46875" y="59.0" />
-    </edge>
-    <edge source="Control.God" target="Model.Weapons.Broadsword">
-      <point x="-103.26315789473665" y="-36.5" />
-      <point x="-10818.263157894737" y="-5248.0" />
-      <point x="-11826.5" y="-5248.0" />
-      <point x="0.0" y="25.5" />
-    </edge>
-    <edge source="Model.Map" target="Model.Monster.Monster">
-      <point x="-116.66666666666652" y="-114.5" />
-      <point x="-9549.639350470246" y="-5248.0" />
-      <point x="-9623.0" y="-5248.0" />
-      <point x="-9623.0" y="-5583.0" />
-      <point x="-9852.282216494845" y="-5583.0" />
-      <point x="88.0" y="48.0" />
+      <point x="-15218.25" y="-6317.75" />
+      <point x="-15275.541666666666" y="-6317.75" />
+      <point x="9.958333333333371" y="59.0" />
     </edge>
     <edge source="Model.Weapons.Shortsword" target="Model.Weapons.Weapon">
       <point x="0.0" y="-25.5" />
-      <point x="-10715.0" y="-6162.0" />
-      <point x="-10889.125966494845" y="-6162.0" />
-      <point x="22.40625" y="59.0" />
-    </edge>
-    <edge source="Control.God" target="Model.Weapons.Shortsword">
-      <point x="0.0" y="-36.5" />
-      <point x="0.0" y="25.5" />
+      <point x="-15715.75" y="-6347.75" />
+      <point x="-15355.208333333334" y="-6347.75" />
+      <point x="-69.70833333333331" y="59.0" />
     </edge>
     <edge source="Model.Monster.Goblin" target="Model.Monster.Monster">
       <point x="0.0" y="-25.5" />
-      <point x="-10067.0" y="-5553.0" />
-      <point x="-9962.282216494845" y="-5553.0" />
-      <point x="-22.0" y="48.0" />
-    </edge>
-    <edge source="Control.Control" target="Control.FightHandler">
-      <point x="12.0" y="-48.5" />
-      <point x="-9275.375" y="-4767.0" />
-      <point x="-9213.625" y="-4767.0" />
-      <point x="73.75" y="81.0" />
-    </edge>
-    <edge source="Control.God" target="Model.Monster.SlimeKing">
-      <point x="91.7894736842104" y="-36.5" />
-      <point x="-10623.21052631579" y="-5258.0" />
-      <point x="-9816.0" y="-5258.0" />
-      <point x="0.0" y="25.5" />
-    </edge>
-    <edge source="Control.FightHandler" target="Model.Tile">
-      <point x="0.0" y="-81.0" />
-      <point x="-9287.375" y="-4969.0" />
-      <point x="-9278.72268380358" y="-4969.0" />
-      <point x="-9278.72268380358" y="-5258.0" />
-      <point x="-9237.931017136914" y="-5258.0" />
-      <point x="140.25" y="92.5" />
-    </edge>
-    <edge source="Control.God" target="Model.Weapons.Flail">
-      <point x="-68.84210526315792" y="-36.5" />
-      <point x="-10783.842105263158" y="-5278.0" />
-      <point x="-11444.5" y="-5278.0" />
-      <point x="0.0" y="25.5" />
+      <point x="-14966.75" y="-6088.5" />
+      <point x="-15204.125" y="-6088.5" />
+      <point x="75.625" y="48.0" />
     </edge>
     <edge source="Model.Monster.Orc" target="Model.Monster.Monster">
       <point x="0.0" y="-25.5" />
-      <point x="-10530.0" y="-5593.0" />
-      <point x="-10050.282216494845" y="-5593.0" />
-      <point x="-110.0" y="48.0" />
-    </edge>
-    <edge source="Control.God" target="Model.Weapons.Sword">
-      <point x="-80.31578947368416" y="-36.5" />
-      <point x="-10795.315789473683" y="-5268.0" />
-      <point x="-11555.5" y="-5268.0" />
-      <point x="0.0" y="25.5" />
-    </edge>
-    <edge source="Control.God" target="Model.Weapons.Scythe">
-      <point x="-45.8947368421052" y="-36.5" />
-      <point x="-10760.894736842105" y="-5298.0" />
-      <point x="-11219.5" y="-5298.0" />
-      <point x="0.0" y="25.5" />
+      <point x="-15091.75" y="-6078.5" />
+      <point x="-15234.375" y="-6078.5" />
+      <point x="45.375" y="48.0" />
     </edge>
     <edge source="Model.Monster.Demon" target="Model.Monster.Monster">
       <point x="0.0" y="-25.5" />
-      <point x="-10188.0" y="-5563.0" />
-      <point x="-9984.282216494845" y="-5563.0" />
-      <point x="-44.0" y="48.0" />
-    </edge>
-    <edge source="Model.Player" target="Model.Weapons.Weapon">
-      <point x="88.25" y="-136.0" />
-      <point x="-9077.517866024597" y="-6056.0" />
-      <point x="-9143.22268380358" y="-6056.0" />
-      <point x="-9143.22268380358" y="-6212.0" />
-      <point x="-10814.438466494845" y="-6212.0" />
-      <point x="97.09375" y="59.0" />
-    </edge>
-    <edge source="Model.Tile" target="Model.Monster.Monster">
-      <point x="-124.66666666666652" y="-92.5" />
-      <point x="-9502.84768380358" y="-5593.0" />
-      <point x="-9830.282216494845" y="-5593.0" />
-      <point x="109.99999999999977" y="48.0" />
-    </edge>
-    <edge source="Control.God" target="Model.Weapons.Dagger">
-      <point x="11.473684210526244" y="-36.5" />
-      <point x="-10703.526315789473" y="-5328.0" />
-      <point x="-10582.0" y="-5328.0" />
-      <point x="0.0" y="25.5" />
-    </edge>
-    <edge source="Control.Control" target="Model.Map">
-      <point x="-36.0" y="-48.5" />
-      <point x="-9323.375" y="-4757.0" />
-      <point x="-9482.791666666668" y="-4757.0" />
-      <point x="-9482.791666666668" y="-4969.0" />
-      <point x="-9432.97268380358" y="-4969.0" />
-      <point x="0.0" y="114.5" />
-    </edge>
-    <edge source="View.View1.MainView1" target="Control.Control">
-      <point x="60.5" y="-92.0" />
-      <point x="-9357.875" y="-4600.0" />
-      <point x="-9305.375" y="-4600.0" />
-      <point x="-18.0" y="48.5" />
-    </edge>
-    <edge source="Model.Player" target="Model.Weapons.Knife">
-      <point x="-88.25" y="-136.0" />
-      <point x="-9254.017866024597" y="-6056.0" />
-      <point x="-9199.22268380358" y="-6056.0" />
-      <point x="0.0" y="25.5" />
-    </edge>
-    <edge source="Control.God" target="Model.Monster.Slime">
-      <point x="103.26315789473688" y="-36.5" />
-      <point x="-10611.736842105263" y="-5248.0" />
-      <point x="-9691.0" y="-5248.0" />
-      <point x="0.0" y="25.5" />
-    </edge>
-    <edge source="Control.God" target="Model.Weapons.Longsword">
-      <point x="-22.947368421052715" y="-36.5" />
-      <point x="-10737.947368421053" y="-5318.0" />
-      <point x="-10984.5" y="-5318.0" />
-      <point x="0.0" y="25.5" />
-    </edge>
-    <edge source="Control.God" target="Model.Monster.Dragon">
-      <point x="80.31578947368416" y="-36.5" />
-      <point x="-10634.684210526317" y="-5268.0" />
-      <point x="-9946.0" y="-5268.0" />
-      <point x="0.0" y="25.5" />
+      <point x="-15606.75" y="-6088.5" />
+      <point x="-15355.375" y="-6088.5" />
+      <point x="-75.625" y="48.0" />
     </edge>
     <edge source="Model.Weapons.Knife" target="Model.Weapons.Weapon">
       <point x="0.0" y="-25.5" />
-      <point x="-9199.22268380358" y="-6202.0" />
-      <point x="-10829.375966494845" y="-6202.0" />
-      <point x="82.15625" y="59.0" />
-    </edge>
-    <edge source="Control.God" target="Model.Weapons.Spear">
-      <point x="-57.36842105263145" y="-36.5" />
-      <point x="-10772.368421052632" y="-5288.0" />
-      <point x="-11335.5" y="-5288.0" />
-      <point x="0.0" y="25.5" />
-    </edge>
-    <edge source="Control.God" target="Model.Weapons.Halberd">
-      <point x="-11.473684210526244" y="-36.5" />
-      <point x="-10726.473684210527" y="-5328.0" />
-      <point x="-10850.0" y="-5328.0" />
-      <point x="0.0" y="25.5" />
-    </edge>
-    <edge source="Control.God" target="Model.Weapons.Lightsaber">
-      <point x="-91.7894736842104" y="-36.5" />
-      <point x="-10806.78947368421" y="-5258.0" />
-      <point x="-11683.5" y="-5258.0" />
-      <point x="0.0" y="25.5" />
+      <point x="-15471.25" y="-6327.75" />
+      <point x="-15315.375" y="-6327.75" />
+      <point x="-29.875" y="59.0" />
     </edge>
     <edge source="Model.Weapons.Spear" target="Model.Weapons.Weapon">
       <point x="0.0" y="-25.5" />
-      <point x="-11335.5" y="-6182.0" />
-      <point x="-10963.813466494845" y="-6182.0" />
-      <point x="-52.28125" y="59.0" />
+      <point x="-14620.25" y="-6367.75" />
+      <point x="-15175.958333333334" y="-6367.75" />
+      <point x="109.54166666666674" y="59.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.30000000000000004" x="-9885.333333333334" y="-5125.333333333334" />
+  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="-15588.0" y="-5585.0" />
   <SelectedNodes>
-    <node>Model.Monster.Monster</node>
-    <node>Model.Weapons.Axe</node>
-    <node>Model.Weapons.Spear</node>
-    <node>Model.Weapons.Lightsaber</node>
-    <node>View.View2.MainView2</node>
-    <node>Model.Monster.Goblin</node>
-    <node>Model.Weapons.Longsword</node>
-    <node>Model.Weapons.Dagger</node>
-    <node>Model.Monster.Golem</node>
-    <node>Model.Monster.Ogre</node>
-    <node>Model.Weapons.Knife</node>
-    <node>Model.Player</node>
-    <node>View.ViewStart.TextAdventure</node>
-    <node>Model.Weapons.Shortsword</node>
-    <node>Model.Weapons.Broadsword</node>
-    <node>MainProgram</node>
     <node>View.View1.MainView1</node>
-    <node>Control.FightHandler</node>
-    <node>Model.Tile</node>
-    <node>Model.Weapons.Sword</node>
-    <node>Control.Control</node>
-    <node>Model.Weapons.Flail</node>
-    <node>Model.Monster.Orc</node>
-    <node>Model.Map</node>
-    <node>Model.Monster.Demon</node>
-    <node>Model.Weapons.Halberd</node>
-    <node>Model.Monster.Slime</node>
-    <node>Model.Monster.Dragon</node>
-    <node>Model.Weapons.Scythe</node>
-    <node>Model.Monster.SlimeKing</node>
-    <node>Control.God</node>
-    <node>Model.Weapons.Weapon</node>
   </SelectedNodes>
   <Categories>
-    <Category>Constructors</Category>
-    <Category>Methods</Category>
     <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
