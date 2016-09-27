@@ -16,6 +16,7 @@ public class Control {
     // Änderung der Koordinaten des Spielers und Erstellung eines neuen "Tiles"
     public void movePlayer(String direction){
         if (direction.equals("North")) {
+            map.setOldTile(map.getTile());
             player.moveToNorth();
             if(map.getMapArray().length <= player.getYPos()) {
                 map.extendArray(0);
@@ -25,13 +26,15 @@ public class Control {
             }
         }
         else if (direction.equals("South")) {
-            map.getPlayer().moveToSouth();
+            map.setOldTile(map.getTile());
+            player.moveToSouth();
             if(map.getMapArray()[player.getYPos()][player.getXPos()] == null) {
                 map.tileGeneration();
             }
         }
         else if (direction.equals("East")) {
-            map.getPlayer().moveToEast();
+            map.setOldTile(map.getTile());
+            player.moveToEast();
             if(map.getMapArray()[0].length <= player.getXPos()) {
                 map.extendArray(1);
             }
@@ -40,7 +43,8 @@ public class Control {
             }
         }
         else if (direction.equals("West")) {
-            map.getPlayer().moveToWest();
+            map.setOldTile(map.getTile());
+            player.moveToWest();
             if(map.getMapArray()[player.getYPos()][player.getXPos()] == null) {
                 map.tileGeneration();
             }

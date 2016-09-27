@@ -2,6 +2,7 @@ package View.View1;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Dimension;
 
 import Control.Control;
 import Control.FightHandler;
@@ -21,7 +22,8 @@ public class MainView1 extends JFrame{
     public MainView1() {
         super("Text Adventure");
         this.setContentPane(actionPanel);
-        this.pack();
+        this.setSize(1000,600);
+        //this.pack();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
         setConsole();
@@ -38,8 +40,11 @@ public class MainView1 extends JFrame{
                 } else if (fight == true){
                     if (fH.fight() == true){
                         textArea.setText(textArea.getText()+" You got 'em! Keep going.");
-                    } else if (fH.fight() == false)
+                        setButtons(false);
+                    } else if (fH.fight() == false){
                         textArea.setText(textArea.getText()+" Wow you got R3KT. Learn to play, noob.");
+                        setButtons(false);
+                    }
                 }
             }
         });
@@ -58,7 +63,10 @@ public class MainView1 extends JFrame{
                     }
                 } else if (fight == true){
                     fH.escape();
-                    textArea.setText(textArea.getText()+"You moved backwards to the Tile which you just left. Pussy.");
+                    textArea.setText(textArea.getText()+" You moved backwards to the Tile which you just left. Pussy.");
+                    fight = false;
+                    setButtons(false);
+                    setConsole();
                 }
             }
         });
@@ -104,7 +112,7 @@ public class MainView1 extends JFrame{
         else if (control.map.getTile().getMonster() != null) {
             textArea.setText(textArea.getText() + actionMessageM());
             fight();
-            setButtons();
+            setButtons(true);
             fH = control.createFh();
         }
         else if(control.map.getTile().getWeapon() != null){
@@ -174,10 +182,17 @@ public class MainView1 extends JFrame{
     }
 
     // Änderung der Inhalte der Buttons, wenn man sich im Kampf befindet.
-    public void setButtons(){
-        NButton.setText("Fight like a man!");
-        SButton.setText("Ahhh, Run away!");
-        WButton.setText(null);
-        EButton.setText(null);
+    public void setButtons(boolean fight){
+        if (fight) {
+            NButton.setText("Fight like a man!");
+            SButton.setText("Ahhh, Run away!");
+            WButton.setText(null);
+            EButton.setText(null);
+        } else{
+            NButton.setText("North");
+            SButton.setText("South");
+            WButton.setText("West");
+            EButton.setText("East");
+        }
     }
 }

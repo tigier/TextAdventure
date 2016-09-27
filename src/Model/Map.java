@@ -54,6 +54,9 @@ public class Map {
     }
 
     // nötige get-Methoden
+    public void setOldTile(Tile tile){
+        oldTile = tile;
+    }
     public Tile getTile(){
         return mapArray[player.getYPos()][player.getXPos()];
     }
