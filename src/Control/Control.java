@@ -16,8 +16,8 @@ public class Control {
 
     public void movePlayer(String direction){
         if (direction.equals("North")) {
-            map.getPlayer().moveToNorth();
-            if(map.getMapArray().length-1 < player.getXPos()) {
+            player.moveToNorth();
+            if(map.getMapArray().length-1 < player.getYPos()) {
                 map.extendArray(0);
             }
             map.tileGeneration();
