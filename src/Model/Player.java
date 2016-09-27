@@ -4,8 +4,8 @@ import Model.Weapons.*;
 
 public class Player {
     int strength = 5;
-    public int xPos;
-    public int yPos;
+    public int xPos = 0;
+    public int yPos = 0;
     Weapon weaponEquipped;
     int tilesCleared = 0;
 
