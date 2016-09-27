@@ -10,7 +10,6 @@ public class Control {
 
     public Control(){
         map = new Map(player);
-        fH = new FightHandler(player,map);
     }
 
 
@@ -47,6 +46,9 @@ public class Control {
         }
     }
 
+    public void createFh(){
+        FightHandler fh = new FightHandler(this.player,this.map);
+    }
     public Player getPlayer(){
             return player;
     }

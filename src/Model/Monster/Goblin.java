@@ -5,7 +5,7 @@ package Model.Monster;
  */
 public class Goblin extends Monster {
     public Goblin(int strength) {
-        super("Goblin", 8+strength, 1);
+        super("Goblin", (8+strength), 1);
 
     }
 }

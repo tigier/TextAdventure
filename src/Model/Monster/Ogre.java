@@ -5,6 +5,6 @@ package Model.Monster;
  */
 public class Ogre extends Monster {
     public Ogre(int strength) {
-        super("Ogre", 22+strength, 3);
+        super("Ogre", (22+strength), 3);
     }
 }

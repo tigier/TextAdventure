@@ -26,6 +26,9 @@ public class MainView1 extends JFrame{
 
         NButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+               /** if (fight = true){
+                    NButton.setText("Attack");
+                }**/
                 control.movePlayer("North");
                 setConsole();
                 if (control.map.getTile().getWeapon() ==(null) && control.map.getTile().getMonster() == (null)){
@@ -83,6 +86,8 @@ public class MainView1 extends JFrame{
         }
         else if (control.map.getTile().getMonster() != null) {
             textArea.setText(textArea.getText() + actionMessageM());
+            //fight();
+            //control.createFh();
         }
         else if(control.map.getTile().getWeapon() != null){
             textArea.setText(textArea.getText()+actionMessageW());
@@ -141,4 +146,5 @@ public class MainView1 extends JFrame{
     public void fight(){
         fight = true;
     }
+
 }
