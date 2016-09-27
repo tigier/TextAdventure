@@ -5,7 +5,7 @@ package Model.Weapons;
  */
 public class Flail extends Weapon {
     public Flail(){
-        super("Flail",5);
+        super("Flail", 512, 8);
     }
 
 }

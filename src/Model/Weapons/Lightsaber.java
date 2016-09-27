@@ -5,6 +5,6 @@ package Model.Weapons;
  */
 public class Lightsaber extends Weapon {
     public Lightsaber(){
-        super("Lightsaber",5);
+        super("Lightsaber", 4096, 11);
     }
 }

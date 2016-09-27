@@ -5,6 +5,6 @@ package Model.Monster;
  */
 public class Slime extends Monster {
     public Slime() {
-        super("Slime", 5);
+        super("Slime", 5, 0);
     }
 }

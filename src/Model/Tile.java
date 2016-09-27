@@ -1,4 +1,5 @@
 package Model;
+import Control.God;
 import Model.Weapons.Weapon;
 import Model.Monster.Monster;
 /**
@@ -48,4 +49,5 @@ public class Tile {
     public void setX(int x) {
         this.x = x;
     }
+
 }

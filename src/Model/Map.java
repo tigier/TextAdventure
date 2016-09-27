@@ -1,14 +1,22 @@
 package Model;
 
+import Control.God;
+import Model.Weapons.*;
+import Model.Monster.*;
+
 public class Map {
     private Player player;
     Tile[][] mapArray = new Tile[1][1];
-    Tile[][] mapArrayN= new Tile[0][0];
+    Tile[][] mapArrayN = new Tile[0][0];
     Tile oldTile;
+    int spawnChance;
+    int whatToSpawn;
+    Weapon spawnWeapon;
+    Monster spawnMonster;
 
     public Map(Player player) {
         this.player = player;
-        mapArray[0][0]=new Tile(0,0,null,null,this.player);
+        mapArray[0][0]= new Tile(0,0,null,null,this.player);
     }
 
     //TODO contents
@@ -32,7 +40,17 @@ public class Map {
     }
 
     public void tileGeneration(){
-        mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),null,null,this.player);
+        spawnChance = (int)(Math.random()*99+1);
+        whatToSpawn = (int)(Math.random()*99+1);
+        if (spawnChance > 40){
+            if (whatToSpawn <= 10){
+                spawnWeapon = God.createWeapon(whatWeaponToSpawn());
+            }
+            else if (whatToSpawn > 10){
+                spawnMonster = God.createMonster(whatMonsterToSpawn());
+            }
+        }
+        mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),spawnWeapon,spawnMonster,this.player);
         System.out.print(mapArray.length);
     }
 
@@ -48,5 +66,46 @@ public class Map {
 
     public Tile[][] getMapArray() {
         return mapArray;
+    }
+
+    public int whatMonsterToSpawn(){
+        if (player.getStrength()+player.getWeaponEquipped().getStrength() <= 30){
+            int thisMonster = (int)(Math.random()*99+1);
+            if (thisMonster <= 25) {
+                return 0;
+            }
+            if (thisMonster > 25 && thisMonster <= 50){
+                return 1;
+            }
+            if (thisMonster > 50 && thisMonster <= 75){
+                return 2;
+            }
+            if (thisMonster > 75){
+                return 3;
+            }
+        }
+        int thisMonster = (int)(Math.random()*99+1);
+        if (thisMonster <= 10) {
+            return 0;
+        } else if (thisMonster > 10 && thisMonster <= 20){
+            return 1;
+        } else if (thisMonster > 20 && thisMonster <= 35){
+            return 2;
+        } else if (thisMonster > 35 && thisMonster <= 50){
+            return 3;
+        } else if (thisMonster > 50 && thisMonster <= 70){
+            return 4;
+        } else if (thisMonster > 70 && thisMonster <= 85){
+            return 5;
+        } else if (thisMonster > 85 && thisMonster <= 95){
+            return 6;
+        } else {
+            return 7;
+        }
+
+    }
+    public int whatWeaponToSpawn(){
+        int thisOne = (player.getWeaponEquipped().getType()+1);
+        return thisOne;
     }
 }
