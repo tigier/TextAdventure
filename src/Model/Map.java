@@ -70,24 +70,76 @@ public class Map {
         return mapArray;
     }
 
+
     // Methoden zur Hilfe der Berechnung, was auf dem "Tile" generiert werden soll.
     public int whatMonsterToSpawn(){
+        int thisMonster = (int)(Math.random()*99+1);
+
+        // Monster bis zum Ogre
         if (player.getStrength()+player.getWeaponEquipped().getStrength() <= 30){
-            int thisMonster = (int)(Math.random()*99+1);
             if (thisMonster <= 25) {
                 return 0;
-            }
-            if (thisMonster > 25 && thisMonster <= 50){
+            } else if (thisMonster > 25 && thisMonster <= 50){
                 return 1;
-            }
-            if (thisMonster > 50 && thisMonster <= 75){
+            } else if (thisMonster > 50 && thisMonster <= 75){
                 return 2;
-            }
-            if (thisMonster > 75){
+            } else {
                 return 3;
             }
         }
-        int thisMonster = (int)(Math.random()*99+1);
+
+        //Monster bis zum Orc
+        if (player.getStrength()+player.getWeaponEquipped().getStrength() <= 60){
+            if (thisMonster <= 20) {
+                return 0;
+            } else if (thisMonster > 20 && thisMonster <= 40){
+                return 1;
+            } else if (thisMonster > 40 && thisMonster <= 50){
+                return 1;
+            } else if (thisMonster > 50 && thisMonster <= 70){
+                return 3;
+            } else {
+                return 4;
+            }
+        }
+
+        //Monster bis zum Golem
+        if (player.getStrength()+player.getWeaponEquipped().getStrength() <= 200){
+            if (thisMonster <= 15){
+                return 0;
+            } else if (thisMonster > 15 && thisMonster <= 25){
+                return 1;
+            } else if (thisMonster > 25 && thisMonster <= 40){
+                return 2;
+            } else if (thisMonster > 40 && thisMonster <= 55){
+                return 3;
+            } else if (thisMonster > 55 && thisMonster <= 72){
+                return 4;
+            } else {
+                return 5;
+            }
+        }
+
+        //Monster bis zum Dragon
+        if (player.getStrength()+player.getWeaponEquipped().getStrength() <= 300){
+            if (thisMonster <= 10){
+                return 0;
+            } else if (thisMonster > 10 && thisMonster <= 20){
+                return 1;
+            } else if (thisMonster > 20 && thisMonster <= 35){
+                return 2;
+            } else if (thisMonster > 35 && thisMonster <= 50){
+                return 3;
+            } else if (thisMonster > 50 && thisMonster <= 70){
+                return 4;
+            } else if (thisMonster > 70 && thisMonster <= 85){
+                return 5;
+            } else {
+                return 6;
+            }
+        }
+
+        //alle Monster available
         if (thisMonster <= 10) {
             return 0;
         } else if (thisMonster > 10 && thisMonster <= 20){
