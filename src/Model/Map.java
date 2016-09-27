@@ -45,4 +45,45 @@ public class Map {
     public Tile[][] getMapArray() {
         return mapArray;
     }
+    //lalalala
+
+    public int whatMonsterToSpawn(){
+        if (player.getStrength()+player.getWeaponEquipped().getStrength() <= 30){
+            int thisMonster = (int)(Math.random()*99+1);
+            if (thisMonster <= 25) {
+                return 0;
+            }
+            if (thisMonster > 25 && thisMonster <= 50){
+                return 1;
+            }
+            if (thisMonster > 50 && thisMonster <= 75){
+                return 2;
+            }
+            if (thisMonster > 75){
+                return 3;
+            }
+        }
+        int thisMonster = (int)(Math.random()*99+1);
+        if (thisMonster <= 10) {
+            return 0;
+        } else if (thisMonster > 10 && thisMonster <= 20){
+            return 1;
+        } else if (thisMonster > 20 && thisMonster <= 35){
+            return 2;
+        } else if (thisMonster > 35 && thisMonster <= 50){
+            return 3;
+        } else if (thisMonster > 50 && thisMonster <= 70){
+            return 4;
+        } else if (thisMonster > 70 && thisMonster <= 85){
+            return 5;
+        } else if (thisMonster > 85 && thisMonster <= 95){
+            return 6;
+        } else {
+            return 7;
+        }
+    }
+    public int whatWeaponToSpawn(){
+        int thisOne = (player.getWeaponEquipped().getType()+1);
+        return thisOne;
+    }
 }
