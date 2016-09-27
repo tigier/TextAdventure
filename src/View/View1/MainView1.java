@@ -63,26 +63,30 @@ public class MainView1 extends JFrame{
         });
         WButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if (control.getPlayer().getXPos() != 0) {
-                    control.movePlayer("West");
+                if (fight == false) {
+                    if (control.getPlayer().getXPos() != 0) {
+                        control.movePlayer("West");
+                        setConsole();
+                        if (control.map.getTile().getWeapon() == (null) && control.map.getTile().getMonster() == (null)) {
+                            control.map.getTile().clear();
+                        }
+                    } else {
+                        textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n" + "\n" + "I won't go into that tall grass!" + "\n" + "Wild Pokemon could attack me!");
+                    }
+                }
+            }
+        });
+        EButton.addActionListener(new ActionListener() {
+            public void actionPerformed (ActionEvent e){
+                if (fight == false) {
+                    control.movePlayer("East");
                     setConsole();
                     if (control.map.getTile().getWeapon() == (null) && control.map.getTile().getMonster() == (null)) {
                         control.map.getTile().clear();
                     }
                 }
-                else{
-                    textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n" + "\n"+"I won't go into that tall grass!"+ "\n"+"Wild Pokemon could attack me!");
-                }
             }
-        });
-        EButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                control.movePlayer("East");
-                setConsole();
-                if (control.map.getTile().getWeapon() ==(null) && control.map.getTile().getMonster() == (null)){
-                    control.map.getTile().clear();
-                }
-            }
+
         });
     }
 
@@ -154,7 +158,7 @@ public class MainView1 extends JFrame{
     }
 
     public String actionMessageW(){
-        return "yay.....a new weapon!"+"New strength:"+(control.getPlayer().getStrength()+control.getPlayer().getWeaponEquipped().getStrength());
+        return "yay.....a new weapon!"+" New strength:"+(control.getPlayer().getStrength()+control.getPlayer().getWeaponEquipped().getStrength());
     }
 
     public void fight(){
