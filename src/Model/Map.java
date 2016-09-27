@@ -15,21 +15,17 @@ public class Map {
     public void extendArray(int w){
         if(w == 0) {
             Tile[][] dummy = new Tile[player.getYPos() + 1][mapArray[0].length];
-            System.arraycopy(mapArray, 0, dummy, 0, mapArray.length);
             for (int i = mapArray.length; 0 < i; i--) {
                 System.arraycopy(mapArray[i - 1], 0, dummy[i - 1], 0, mapArray[i - 1].length);
             }
             mapArray = dummy;
         }
         else if (w == 1){
-            Tile[][] dummy = new Tile[mapArray.length][player.getXPos()];
-            System.arraycopy(mapArray, 0, dummy, 0, mapArray.length);
-            for (int i = mapArray.length; 0 < i; i--) {
+            Tile[][] dummy = new Tile[mapArray.length][player.getXPos()+1];
+            for (int i = player.getXPos(); 0 < i; i--) {
                 System.arraycopy(mapArray[i-1], 0, dummy[i - 1], 0, mapArray[i - 1].length);
             }
             mapArray = dummy;
-            mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),null,null,this.player);
-            System.out.print(mapArray[1].length);
         }
     }
 

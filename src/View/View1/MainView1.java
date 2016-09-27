@@ -37,18 +37,27 @@ public class MainView1 extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 control.movePlayer("South");
                 setConsole();
+                if (control.map.getTile().getWeapon() ==(null) && control.map.getTile().getMonster() == (null)){
+                    control.map.getTile().clear();
+                }
             }
         });
         WButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 control.movePlayer("West");
                 setConsole();
+                if (control.map.getTile().getWeapon() ==(null) && control.map.getTile().getMonster() == (null)){
+                    control.map.getTile().clear();
+                }
             }
         });
         EButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 control.movePlayer("East");
                 setConsole();
+                if (control.map.getTile().getWeapon() ==(null) && control.map.getTile().getMonster() == (null)){
+                    control.map.getTile().clear();
+                }
             }
         });
     }
