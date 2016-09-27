@@ -22,9 +22,11 @@ public class Map {
             mapArray = dummy;
         }
         else if (w == 1){
-            Tile[][] dummy = new Tile[mapArray.length][mapArray[1].length + 1];
-            System.arraycopy(mapArray,0,dummy,0,mapArray.length);
-            System.arraycopy(mapArray[1],0,dummy[1],0,mapArray[1].length);
+            Tile[][] dummy = new Tile[mapArray.length][player.getXPos()];
+            System.arraycopy(mapArray, 0, dummy, 0, mapArray.length);
+            for (int i = mapArray.length; 0 < i; i--) {
+                System.arraycopy(mapArray[i-1], 0, dummy[i - 1], 0, mapArray[i - 1].length);
+            }
             mapArray = dummy;
             mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),null,null,this.player);
             System.out.print(mapArray[1].length);
@@ -33,7 +35,6 @@ public class Map {
 
     public void tileGeneration(){
         mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),null,null,this.player);
-        System.out.print(mapArray.length);
     }
 
     public Tile getTile(){

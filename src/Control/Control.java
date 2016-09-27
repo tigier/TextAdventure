@@ -20,7 +20,9 @@ public class Control {
             if(map.getMapArray().length-1 < player.getYPos()) {
                 map.extendArray(0);
             }
-            map.tileGeneration();
+            if(map.getMapArray()[player.getYPos()][player.getXPos()] == null) {
+                map.tileGeneration();
+            }
         }
         else if (direction.equals("South")) {
             map.getPlayer().moveToSouth();
