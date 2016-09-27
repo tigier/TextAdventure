@@ -1,10 +1,10 @@
 package Model.Monster;
 
 /**
- * Created by 204g04 on 23.09.2016.
+ * Created by Anthony on 23.09.2016.
  */
 public class Goblin extends Monster {
     public Goblin() {
-        super("Goblin", 5);
+        super("Goblin", 8, 1);
     }
 }

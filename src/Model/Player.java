@@ -9,9 +9,10 @@ public class Player {
     Weapon weaponEquipped = new Knife();
     int tilesCleared = 0;
 
-    public void Player(){
-        this.xPos = 0;
-        this.yPos = 0;
+
+    public void Player(int xPos, int yPos){
+        this.xPos = xPos;
+        this.yPos = yPos;
     }
 
     //set-Methods
@@ -28,7 +29,7 @@ public class Player {
         this.tilesCleared = tilesCleared;
     }
     public void setWeaponEquipped(int type){
-        this.weaponEquipped = God.createWeapon(this);
+        this.weaponEquipped = God.createWeapon(type);
     }
 
     //get-Methods

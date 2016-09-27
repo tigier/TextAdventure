@@ -1,16 +1,18 @@
 package Model.Weapons;
 
 /**
- * Created by 204g05 on 19.09.2016.
+ * Created by Anthony on 19.09.2016.
  */
 public abstract class Weapon {
     String name;
     int strength;
     boolean canFind;
+    int type;
 
-    public Weapon(String name, int strength){
+    public Weapon(String name, int strength, int type){
         this.name = name;
         this.strength = strength;
+        this.type = type;
     }
 
     public void setStrength(int strength){
@@ -22,5 +24,9 @@ public abstract class Weapon {
 
     public String getName() {
         return name;
+    }
+
+    public int getType(){
+        return type;
     }
 }
