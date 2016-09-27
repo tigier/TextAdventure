@@ -35,10 +35,15 @@ public class MainView1 extends JFrame{
         });
         SButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                control.movePlayer("South");
-                setConsole();
-                if (control.map.getTile().getWeapon() ==(null) && control.map.getTile().getMonster() == (null)){
-                    control.map.getTile().clear();
+                if (control.getPlayer().getYPos() != 0) {
+                    control.movePlayer("South");
+                    setConsole();
+                    if (control.map.getTile().getWeapon() == (null) && control.map.getTile().getMonster() == (null)) {
+                        control.map.getTile().clear();
+                    }
+                }
+                else{
+                    textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n" + "\n"+"You are amazed by the ");
                 }
             }
         });
