@@ -27,7 +27,7 @@ public class Map {
             mapArray = dummy;
         }
     }
-
+//hi
     public void tileGeneration(){
         mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),null,null,this.player);
     }
