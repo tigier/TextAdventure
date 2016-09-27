@@ -35,7 +35,7 @@ public class MainView1 extends JFrame{
         });
         SButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if (control.getPlayer().getYPos() != 0) {
+                if (control.getPlayer().getYPos() != 0){
                     control.movePlayer("South");
                     setConsole();
                     if (control.map.getTile().getWeapon() == (null) && control.map.getTile().getMonster() == (null)) {
@@ -43,16 +43,21 @@ public class MainView1 extends JFrame{
                     }
                 }
                 else{
-                    textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n" + "\n"+"You are amazed by the ");
+                    textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n" + "\n"+"You are amazed by the glimmering water blocking your way."+ "\n"+"But you are afraid of water!");
                 }
             }
         });
         WButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                control.movePlayer("West");
-                setConsole();
-                if (control.map.getTile().getWeapon() ==(null) && control.map.getTile().getMonster() == (null)){
-                    control.map.getTile().clear();
+                if (control.getPlayer().getXPos() != 0) {
+                    control.movePlayer("West");
+                    setConsole();
+                    if (control.map.getTile().getWeapon() == (null) && control.map.getTile().getMonster() == (null)) {
+                        control.map.getTile().clear();
+                    }
+                }
+                else{
+                    textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n" + "\n"+"I won't go into that tall grass!"+ "\n"+"Wild Pokemon could attack me!");
                 }
             }
         });
