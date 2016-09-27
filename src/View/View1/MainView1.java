@@ -95,6 +95,7 @@ public class MainView1 extends JFrame{
         else if (control.map.getTile().getMonster() != null) {
             textArea.setText(textArea.getText() + actionMessageM());
             fight();
+            setButtons();
             fH = control.createFh();
         }
         else if(control.map.getTile().getWeapon() != null){
