@@ -16,7 +16,7 @@ public class Control {
     public void movePlayer(String direction){
         if (direction.equals("North")) {
             player.moveToNorth();
-            if(map.getMapArray().length-1 < player.getYPos()) {
+            if(map.getMapArray().length <= player.getYPos()) {
                 map.extendArray(0);
             }
             if(map.getMapArray()[player.getYPos()][player.getXPos()] == null) {
@@ -31,7 +31,7 @@ public class Control {
         }
         else if (direction.equals("East")) {
             map.getPlayer().moveToEast();
-            if(map.getMapArray()[0].length-1 < player.getXPos()) {
+            if(map.getMapArray()[0].length <= player.getXPos()) {
                 map.extendArray(1);
             }
             if(map.getMapArray()[player.getYPos()][player.getXPos()] == null) {

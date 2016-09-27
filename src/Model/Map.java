@@ -5,7 +5,7 @@ import Model.Monster.*;
 
 public class Map {
     private Player player;
-    Tile[][] mapArray = new Tile[1][1];
+    Tile[][] mapArray = new Tile[1000][1000];
     Tile oldTile;
     int spawnChance;
     int whatToSpawn;
@@ -27,9 +27,9 @@ public class Map {
             mapArray = dummy;
         }
         else if (w == 1){
-            Tile[][] dummy = new Tile[mapArray.length][player.getXPos()+1];
-            for (int i = player.getXPos(); 0 < i; i--) {
-                System.arraycopy(mapArray[i-1], 0, dummy[i - 1], 0, mapArray[i - 1].length);
+            Tile[][] dummy = new Tile[mapArray.length][player.getXPos()];
+            for (int i = 0; i < mapArray.length; i++) {
+                System.arraycopy(mapArray[mapArray.length-i], 0, dummy[mapArray.length-i], 0, mapArray[mapArray.length-1].length);
             }
             mapArray = dummy;
         }
