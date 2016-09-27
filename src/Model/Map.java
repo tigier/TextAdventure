@@ -14,7 +14,7 @@ public class Map {
 
     public Map(Player player) {
         this.player = player;
-        mapArray[0][0]=new Tile(0,0,null,null,this.player);
+        mapArray[0][0]=new Tile(0,0,null,null);
     }
 
     // Methode zur Erweiterung des Arrays
@@ -50,7 +50,7 @@ public class Map {
                 }
             }
         }
-        mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),spawnWeapon,spawnMonster,this.player);
+        mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),spawnWeapon,spawnMonster);
     }
 
     // nötige get-Methoden

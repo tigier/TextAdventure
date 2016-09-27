@@ -9,10 +9,9 @@ public class Tile {
     int x,y;
     Weapon weapon;
     Monster monster;
-    Player player;
     boolean cleared = false;
 
-    public Tile(int x, int y, Weapon weapon, Monster monster, Player player) {
+    public Tile(int x, int y, Weapon weapon, Monster monster) {
         this.x = x;
         this.y = y;
         this.weapon = weapon;
