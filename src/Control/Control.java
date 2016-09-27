@@ -19,7 +19,7 @@ public class Control {
             player.moveToNorth();
             if(map.getMapArray().length-1 < player.getYPos()) {
                 map.extendArray(0);
-            }            System.out.print(map.getMapArray().length+""+map.getMapArray()[0].length);
+            }
             if(map.getMapArray()[player.getYPos()][player.getXPos()] == null) {
                 map.tileGeneration();
             }
@@ -34,7 +34,7 @@ public class Control {
             map.getPlayer().moveToEast();
             if(map.getMapArray()[0].length-1 < player.getXPos()) {
                 map.extendArray(1);
-            }            System.out.print(map.getMapArray().length+""+map.getMapArray()[0].length);
+            }
             if(map.getMapArray()[player.getYPos()][player.getXPos()] == null) {
                 map.tileGeneration();
             }
