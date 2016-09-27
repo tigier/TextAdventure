@@ -3,7 +3,6 @@ package Model;
 public class Map {
     private Player player;
     Tile[][] mapArray = new Tile[1][1];
-    Tile[][] mapArrayN= new Tile[0][0];
     Tile oldTile;
 
     public Map(Player player) {
