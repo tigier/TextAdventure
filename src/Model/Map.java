@@ -34,7 +34,7 @@ public class Map {
             mapArray = dummy;
         }
     }
-//hi
+
     public void tileGeneration(){
         spawnChance = (int)(Math.random()*99+1);
         whatToSpawn = (int)(Math.random()*99+1);
@@ -46,7 +46,7 @@ public class Map {
                 spawnMonster = God.createMonster(whatMonsterToSpawn());
             }
         }
-        mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),null,null,this.player);
+        mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),spawnWeapon,spawnMonster,this.player);
     }
 
     public Tile getTile(){
@@ -74,7 +74,7 @@ public class Map {
             }
             if (thisMonster > 50 && thisMonster <= 75){
                 return 2;
-            }//kot
+            }
             if (thisMonster > 75){
                 return 3;
             }
