@@ -46,8 +46,8 @@ public class Control {
         }
     }
 
-    public void createFh(){
-        FightHandler fh = new FightHandler(this.player,this.map);
+    public FightHandler createFh(){
+        return new FightHandler(this.player,this.map);
     }
     public Player getPlayer(){
             return player;

@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import Control.Control;
+import Control.FightHandler;
 
 public class MainView1 extends JFrame{
 
@@ -14,6 +15,7 @@ public class MainView1 extends JFrame{
     private JButton EButton;
     public JTextArea textArea;
     Control control = new Control();
+    FightHandler fH;
     boolean fight = false;
 
     public MainView1() {
@@ -26,25 +28,34 @@ public class MainView1 extends JFrame{
 
         NButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                control.movePlayer("North");
-                setConsole();
-                if (control.map.getTile().getWeapon() ==(null) && control.map.getTile().getMonster() == (null)){
-                    control.map.getTile().clear();
+                if (fight == false) {
+                    control.movePlayer("North");
+                    setConsole();
+                    if (control.map.getTile().getWeapon() == (null) && control.map.getTile().getMonster() == (null)) {
+                        control.map.getTile().clear();
+                    }
+                } else if (fight == true){
+                    fH.fight();
                 }
             }
         });
         SButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if (control.getPlayer().getYPos() != 0){
-                    control.movePlayer("South");
-                    setConsole();
-                    if (control.map.getTile().getWeapon() == (null) && control.map.getTile().getMonster() == (null)) {
-                        control.map.getTile().clear();
+                if (fight == false){
+                    if (control.getPlayer().getYPos() != 0){
+                        control.movePlayer("South");
+                        setConsole();
+                        if (control.map.getTile().getWeapon() == (null) && control.map.getTile().getMonster() == (null)) {
+                            control.map.getTile().clear();
+                        }
                     }
+                    else{
+                        textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n" + "\n"+"You are amazed by the glimmering water blocking your way."+ "\n"+"But you are afraid of water!");
+                    }
+                } else if (fight == true){
+                    fH.escape();
                 }
-                else{
-                    textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n" + "\n"+"You are amazed by the glimmering water blocking your way."+ "\n"+"But you are afraid of water!");
-                }
+
             }
         });
         WButton.addActionListener(new ActionListener() {
@@ -83,8 +94,8 @@ public class MainView1 extends JFrame{
         }
         else if (control.map.getTile().getMonster() != null) {
             textArea.setText(textArea.getText() + actionMessageM());
-            //fight();
-            //control.createFh();
+            fight();
+            fH = control.createFh();
         }
         else if(control.map.getTile().getWeapon() != null){
             textArea.setText(textArea.getText()+actionMessageW());
@@ -145,8 +156,8 @@ public class MainView1 extends JFrame{
     }
 
     public void setButtons(){
-        NButton.setText("Fight");
-        SButton.setText("Escape");
+        NButton.setText("Fight like a man!");
+        SButton.setText("Ahhh, Run away!");
         WButton.setText(null);
         EButton.setText(null);
     }
