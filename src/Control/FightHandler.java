@@ -28,16 +28,18 @@ public class FightHandler {
         player.setYPos(map.getOldTile().getY());
     }
 
-    public void fight(){
+    public boolean fight(){
         tile = map.getTile();
         monster = tile.getMonster();
         weapon = player.getWeaponEquipped();
         if ((player.getStrength()+weapon.getStrength()) > monster.getStrength()){
             fightWon(this.tile);
-        }
-        if ((player.getStrength()+weapon.getStrength()) <= monster.getStrength()){
+            return true;
+        } else if ((player.getStrength()+weapon.getStrength()) <= monster.getStrength()){
             fightLost();
+            return false;
         }
+        return false;
     }
 
     public void fightWon(Tile tile){

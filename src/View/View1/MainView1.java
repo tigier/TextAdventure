@@ -35,7 +35,10 @@ public class MainView1 extends JFrame{
                         control.map.getTile().clear();
                     }
                 } else if (fight == true){
-                    fH.fight();
+                    if (fH.fight() == true){
+                        textArea.setText(textArea.getText()+"You got 'em! Keep going.");
+                    } else if (fH.fight() == false)
+                        textArea.setText(textArea.getText()+"Wow you got R3KT. Learn to play, noob.");
                 }
             }
         });
@@ -54,6 +57,7 @@ public class MainView1 extends JFrame{
                     }
                 } else if (fight == true){
                     fH.escape();
+                    textArea.setText(textArea.getText()+"You moved backwards to the Tile which you just left. Pussy.");
                 }
 
             }
@@ -100,6 +104,8 @@ public class MainView1 extends JFrame{
         }
         else if(control.map.getTile().getWeapon() != null){
             textArea.setText(textArea.getText()+actionMessageW());
+            control.getPlayer().setWeaponEquipped(control.map.getTile().getWeapon().getType());
+
         }
         else{
             textArea.setText(textArea.getText()+actionMessage());
@@ -149,7 +155,7 @@ public class MainView1 extends JFrame{
     }
 
     public String actionMessageW(){
-        return "yay.....a new weapon!";
+        return "yay.....a new weapon!"+"New strength:"+(control.getPlayer().getStrength()+control.getPlayer().getWeaponEquipped().getStrength());
     }
 
     public void fight(){
