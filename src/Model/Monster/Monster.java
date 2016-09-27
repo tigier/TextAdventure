@@ -1,7 +1,7 @@
 package Model.Monster;
 import Model.Player;
 /**
- * Created by 204g04 on 19.09.2016.
+ * Created by Anthony on 19.09.2016.
  */
 public abstract class Monster {
     String name;

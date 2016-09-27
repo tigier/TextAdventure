@@ -3,7 +3,7 @@ import Control.God;
 import Model.Weapons.Weapon;
 import Model.Monster.Monster;
 /**
- * Created by 204g05 on 19.09.2016.
+ * Created by Anthony on 19.09.2016.
  */
 public class Tile {
     int x,y;

@@ -2,10 +2,8 @@ package Control;
 
 import Model.Weapons.*;
 import Model.Monster.*;
-import Model.Player;
-import Model.Tile;
 /**
- * Created by 204g04 on 23.09.2016.
+ * Created by Anthony on 23.09.2016.
  */
 public class God {
 

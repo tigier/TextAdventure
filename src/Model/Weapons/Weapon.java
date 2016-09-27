@@ -1,7 +1,7 @@
 package Model.Weapons;
 
 /**
- * Created by 204g05 on 19.09.2016.
+ * Created by Anthony on 19.09.2016.
  */
 public abstract class Weapon {
     String name;
