@@ -13,7 +13,7 @@ public class Control {
         map = new Map(player);
     }
 
-
+    // Änderung der Koordinaten des Spielers und Erstellung eines neuen "Tiles"
     public void movePlayer(String direction){
         if (direction.equals("North")) {
             player.moveToNorth();
@@ -47,9 +47,11 @@ public class Control {
         }
     }
 
+    // Methode zur Erstellung eines "FightHandlers", die einen FightHandler zurückliefert
     public FightHandler createFh(){
         return new FightHandler(this.player,this.map);
     }
+    // Methode zur Zurücklieferung des Players
     public Player getPlayer(){
             return player;
     }

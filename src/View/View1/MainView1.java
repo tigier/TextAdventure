@@ -26,6 +26,7 @@ public class MainView1 extends JFrame{
         this.setVisible(true);
         setConsole();
 
+        //Buttons
         NButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (fight == false) {
@@ -90,6 +91,7 @@ public class MainView1 extends JFrame{
         });
     }
 
+    // Ausgabe
     public void setConsole() {
         textArea.setText("Current tile: [" + control.map.getPlayer().getYPos() + "/" + control.map.getPlayer().getXPos() + "]" + "\n" + "\n");
         if (control.getPlayer().getTilesCleared() == 0) {
@@ -115,10 +117,12 @@ public class MainView1 extends JFrame{
         }
     }
 
+    // Ausgabetext, am Anfang
     public String StartMessage(){
         return "Hello Player,"+"\n"+"This is our Textadventure."+"\n"+"To play the game simply move around the tile-based world,"+"\n"+"find weapons and battle monsters."+"\n"+"\n"+"Have fun!";
     }
 
+    // Ausgabetext, wenn man auf ein leeres Feld geht.
     public String actionMessage(){
         if (control.map.getTile().getCleared() == false){
             return "Keep going!"+"\n"+"Here is nothing to see.";
@@ -127,6 +131,8 @@ public class MainView1 extends JFrame{
             return "This place seems familiar."+"\n"+"Nothing here tho.";
         }
     }
+
+    // Ausgabetext, wenn man auf ein Monster stößt
     public String actionMessageM(){
         if (control.map.getTile().getMonster().getName().equals("Slime")){
             return "You have encountered:"+"\n"+"A smelling pile of goo!";
@@ -157,14 +163,17 @@ public class MainView1 extends JFrame{
         }
     }
 
+    // Ausgabetext, wenn man auf eine Waffe stößt
     public String actionMessageW(){
         return "yay.....a new weapon!"+" New strength:"+(control.getPlayer().getStrength()+control.getPlayer().getWeaponEquipped().getStrength());
     }
 
+    // set-Methode
     public void fight(){
         fight = true;
     }
 
+    // Änderung der Inhalte der Buttons, wenn man sich im Kampf befindet.
     public void setButtons(){
         NButton.setText("Fight like a man!");
         SButton.setText("Ahhh, Run away!");

@@ -17,7 +17,7 @@ public class Map {
         mapArray[0][0]=new Tile(0,0,null,null,this.player);
     }
 
-    //TODO contents
+    // Methode zur Erweiterung des Arrays
     public void extendArray(int w){
         if(w == 0) {
             Tile[][] dummy = new Tile[player.getYPos() + 1][mapArray[0].length];
@@ -35,6 +35,7 @@ public class Map {
         }
     }
 
+    // Methode zur Generierung eines "Tiles" mit einer 60% Wahrscheinlichkeit, dass sich etwas auf dem Tile befindet.
     public void tileGeneration(){
         spawnChance = (int)(Math.random()*99+1);
         whatToSpawn = (int)(Math.random()*99+1);
@@ -52,6 +53,7 @@ public class Map {
         mapArray[player.getYPos()][player.getXPos()] = new Tile(player.getXPos(),player.getYPos(),spawnWeapon,spawnMonster,this.player);
     }
 
+    // nötige get-Methoden
     public Tile getTile(){
         return mapArray[player.getYPos()][player.getXPos()];
     }
@@ -61,11 +63,11 @@ public class Map {
     public Tile getOldTile() {
         return oldTile;
     }
-
     public Tile[][] getMapArray() {
         return mapArray;
     }
 
+    // Methoden zur Hilfe der Berechnung, was auf dem "Tile" generiert werden soll.
     public int whatMonsterToSpawn(){
         if (player.getStrength()+player.getWeaponEquipped().getStrength() <= 30){
             int thisMonster = (int)(Math.random()*99+1);

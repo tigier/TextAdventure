@@ -7,6 +7,7 @@ import Model.Monster.*;
  */
 public class God {
 
+    // Methode zum generieren neuer Waffen
     public static Weapon createWeapon(int type) {
         if (type == 0) {
             return new Dagger();
@@ -34,6 +35,7 @@ public class God {
         return null;
     }
 
+    // Methode zum generieren von Monstern
     public static Monster createMonster(int type, int addStrength){
         if (type == 0){
             return new Slime(addStrength); //10

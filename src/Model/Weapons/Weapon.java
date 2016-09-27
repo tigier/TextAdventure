@@ -6,7 +6,6 @@ package Model.Weapons;
 public abstract class Weapon {
     String name;
     int strength;
-    boolean canFind;
     int type;
 
     public Weapon(String name, int strength, int type){
@@ -15,6 +14,7 @@ public abstract class Weapon {
         this.type = type;
     }
 
+    // nötige set- & get-Methoden
     public void setStrength(int strength){
         this.strength = strength;
     }

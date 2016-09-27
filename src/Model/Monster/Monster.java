@@ -4,6 +4,8 @@ import Model.Player;
  * Created by Anthony on 19.09.2016.
  */
 public abstract class Monster {
+    // abstrake Klasse "Monster"
+
     String name;
     double strength;
     int type;
@@ -16,6 +18,7 @@ public abstract class Monster {
         this.player = player;
     }
 
+    // nötige set- & get-Methoden
     public void setStrength(int strength){
         this.strength = strength;
     }

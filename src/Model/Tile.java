@@ -19,6 +19,7 @@ public class Tile {
         this.monster = monster;
     }
 
+    // set- & get-Methods
     public Monster getMonster() {
         return monster;
     }

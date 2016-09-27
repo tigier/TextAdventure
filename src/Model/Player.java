@@ -9,7 +9,7 @@ public class Player {
     Weapon weaponEquipped;
     int tilesCleared = 0;
 
-
+    // Konstruktor des Players und die Erstellung eines Knife.
     public Player(){
         weaponEquipped = new Knife();
     }
