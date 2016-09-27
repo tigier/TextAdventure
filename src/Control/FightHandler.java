@@ -32,10 +32,10 @@ public class FightHandler {
         tile = map.getTile();
         monster = tile.getMonster();
         weapon = player.getWeaponEquipped();
-        if ((player.getStrength()+weapon.getStrength()) >= monster.getStrength()){
+        if ((player.getStrength()+weapon.getStrength()) > monster.getStrength()){
             fightWon(this.tile);
         }
-        if ((player.getStrength()+weapon.getStrength()) < monster.getStrength()){
+        if ((player.getStrength()+weapon.getStrength()) <= monster.getStrength()){
             fightLost();
         }
     }

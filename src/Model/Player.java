@@ -6,13 +6,14 @@ public class Player {
     int strength = 5;
     public int xPos;
     public int yPos;
-    Weapon weaponEquipped = new Knife();
+    Weapon weaponEquipped;
     int tilesCleared = 0;
 
 
     public void Player(int xPos, int yPos){
         this.xPos = xPos;
         this.yPos = yPos;
+        weaponEquipped = new Knife();
     }
 
     //set-Methods
